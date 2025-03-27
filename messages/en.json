@@ -1,0 +1,105 @@
+{
+  "HomePage": {
+    "title": "Welcome to Sunday Software Solutions",
+    "description": "We provide top-notch software development, SaaS solutions, and AI-powered bots.",
+    "services": {
+      "software": "Custom Software Development",
+      "softwareDesc": "We build tailored applications to meet your business needs.",
+      "saas": "SaaS Solutions",
+      "saasDesc": "Cloud-based solutions to enhance efficiency and scalability.",
+      "bots": "Automated Bots",
+      "botsDesc": "AI-driven chatbots for customer support and business automation."
+    },
+    "cta": {
+      "text": "Ready to take your business to the next level?",
+      "button": "Contact Us"
+    }
+  },
+    "Nav": {
+        "home": "Home",
+        "objective": "Objective",
+        "services": "Services",
+        "about": "About",
+        "contact": "Contact"
+      },
+      "Footer": {
+        "rigthsReserved" : "All Rigths Reserved"
+      },
+      "Services": {
+        "title": "Our Services",
+        "developmentTitle": "Software Development",
+        "developmentDescription": "We offer custom software solutions tailored to your business needs. Our expertise spans across various platforms, ensuring the right fit for your project.",
+        "customSoftwareDevelopment": "Custom Software Development",
+        "mobileAppDevelopment": "Mobile App Development",
+        "webAppDevelopment": "Web Application Development",
+        "enterpriseSolutions": "Enterprise Solutions",
+        
+        "supportTitle": "Technical Support",
+        "supportDescription": "We provide comprehensive IT support services, from troubleshooting to system maintenance, ensuring your technology runs smoothly.",
+        "itSupport": "IT Support",
+        "helpDeskServices": "Help Desk Services",
+        "maintenanceServices": "Maintenance and System Updates",
+        
+        "saasTitle": "Software as a Service (SaaS)",
+        "saasDescription": "We develop cloud-based software applications to help your business scale. Whether it's a custom solution or an existing platform, we deliver secure and scalable SaaS products.",
+        "customSaaSDevelopment": "Custom SaaS Development",
+        "cloudSolutions": "Cloud Solutions",
+        "scalableApps": "Scalable and Reliable Applications",
+        
+        "botsTitle": "Bots and Automation",
+        "botsDescription": "Our bot development services offer advanced automation solutions, from chatbots for customer support to appointment scheduling bots, enhancing user experience and operational efficiency.",
+        "whatsappBots": "WhatsApp Bots for Customer Interaction",
+        "customerSupportBots": "Customer Support Chatbots",
+        "appointmentSchedulingBots": "Appointment Scheduling Automation",
+        "automatedResponseBots": "Automated Response Bots"
+      },
+      "About": {
+        "title": "About Us",
+        "introDescription": "We are Sunday Software Solutions, a company focused on providing cutting-edge software solutions tailored to meet the needs of small and medium-sized businesses. Our goal is to empower businesses through innovative technologies and exceptional customer support.",
+        
+        "missionTitle": "Our Mission",
+        "missionDescription": "Our mission is to deliver high-quality, reliable, and scalable software solutions that enhance business operations and foster growth.",
+        
+        "visionTitle": "Our Vision",
+        "visionDescription": "We envision becoming a global leader in providing innovative technology solutions to businesses across various industries, helping them succeed in a rapidly evolving digital world.",
+        
+        "teamTitle": "Meet Our Team",
+        "member1JobDescription": "John is the CEO of Sunday Software Solutions. He has over 10 years of experience in leading tech companies and is passionate about innovation and business growth.",
+        "member2JobDescription": "Jane is the CTO, overseeing the technical direction and ensuring that all our products meet the highest standards of quality and performance.",
+        "member3JobDescription": "Alex is our Lead Developer, working closely with the team to build robust and scalable solutions for our clients.",
+        
+        "locationTitle": "Our Location",
+        "locationDescription": "We are located in the heart of the city, easily accessible and close to major transportation hubs.",
+        
+        "extraInfoTitle": "Why Choose Us",
+        "extraInfoDescription": "We are committed to excellence, customer satisfaction, and continuous improvement. With a highly skilled team, we ensure the best results for all of our clients."
+      },
+      "Contact": {
+        "title": "Contact Us",
+        "introDescription": "We would love to hear from you! Please fill out the form below, and our team will get in touch with you as soon as possible.",
+        "formTitle": "Contact Form",
+        "name": "Name",
+        "company": "Company",
+        "requirementType": "Requirement Type",
+        "selectRequirement": "Select a Requirement",
+        "development": "Development",
+        "support": "Support",
+        "saas": "SaaS",
+        "bot": "Bot",
+        "other": "Other",
+        "contactType": "Contact Type",
+        "selectContactType": "Select Contact Type",
+        "phone": "Phone",
+        "email": "Email",
+        "projectDescription": "Project Description",
+        "businessSector": "Business Sector",
+        "orContactUs": "Or Contact Us Directly:",
+        "submit": "Submit",
+        "thankYouTitle": "Thank You!",
+        "thankYouMessage": "Thank you for reaching out! We will get back to you as soon as possible. Redirecting to the homepage..."
+      },
+      "LocaleSwitcher": {
+        "label": "Change language",
+        "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
+      }
+  }

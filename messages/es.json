@@ -1,0 +1,105 @@
+{
+    "HomePage": {
+    "title": "Bienvenido a Sunday Software Solutions",
+    "description": "Brindamos desarrollo de software de alta calidad, soluciones SaaS y bots con inteligencia artificial.",
+    "services": {
+      "software": "Desarrollo de Software Personalizado",
+      "softwareDesc": "Creamos aplicaciones a medida para satisfacer las necesidades de tu negocio.",
+      "saas": "Soluciones SaaS",
+      "saasDesc": "Soluciones en la nube para mejorar la eficiencia y escalabilidad.",
+      "bots": "Bots Automatizados",
+      "botsDesc": "Chatbots impulsados por IA para soporte al cliente y automatización empresarial."
+    },
+    "cta": {
+      "text": "¿Listo para llevar tu negocio al siguiente nivel?",
+      "button": "Contáctanos"
+    }
+  },
+    "Nav": {
+        "home": "Home",
+        "objective": "Objetivo",
+        "services": "Servicios",
+        "about": "Acerca de",
+        "contact": "Contacto"
+      },
+      "Footer": {
+        "rigthsReserved" : "Todos los derechos reservados"
+    },
+    "Services": {
+      "title": "Nuestros Servicios",
+      "developmentTitle": "Desarrollo de Software",
+      "developmentDescription": "Ofrecemos soluciones de software personalizadas adaptadas a las necesidades de su negocio. Nuestra experiencia abarca diversas plataformas, asegurando la mejor opción para su proyecto.",
+      "customSoftwareDevelopment": "Desarrollo de Software Personalizado",
+      "mobileAppDevelopment": "Desarrollo de Aplicaciones Móviles",
+      "webAppDevelopment": "Desarrollo de Aplicaciones Web",
+      "enterpriseSolutions": "Soluciones Empresariales",
+      
+      "supportTitle": "Soporte Técnico",
+      "supportDescription": "Ofrecemos servicios completos de soporte IT, desde la solución de problemas hasta el mantenimiento del sistema, asegurando que su tecnología funcione sin problemas.",
+      "itSupport": "Soporte IT",
+      "helpDeskServices": "Servicios de Mesa de Ayuda",
+      "maintenanceServices": "Mantenimiento y Actualización de Sistemas",
+      
+      "saasTitle": "Software como Servicio (SaaS)",
+      "saasDescription": "Desarrollamos aplicaciones de software basadas en la nube para ayudar a su empresa a escalar. Ya sea una solución personalizada o una plataforma existente, entregamos productos SaaS seguros y escalables.",
+      "customSaaSDevelopment": "Desarrollo de SaaS Personalizado",
+      "cloudSolutions": "Soluciones en la Nube",
+      "scalableApps": "Aplicaciones Escalables y Fiables",
+      
+      "botsTitle": "Bots y Automatización",
+      "botsDescription": "Nuestros servicios de desarrollo de bots ofrecen soluciones avanzadas de automatización, desde chatbots para soporte al cliente hasta bots para agendar citas, mejorando la experiencia del usuario y la eficiencia operativa.",
+      "whatsappBots": "Bots de WhatsApp para Interacción con Clientes",
+      "customerSupportBots": "Chatbots de Soporte al Cliente",
+      "appointmentSchedulingBots": "Automatización de Agendamiento de Citas",
+      "automatedResponseBots": "Bots de Respuestas Automatizadas"
+    },
+    "About": {
+      "title": "Acerca de Nosotros",
+      "introDescription": "Somos Sunday Software Solutions, una empresa enfocada en brindar soluciones de software innovadoras y personalizadas para pequeñas y medianas empresas. Nuestro objetivo es empoderar a los negocios mediante tecnologías de vanguardia y un soporte al cliente excepcional.",
+      
+      "missionTitle": "Nuestra Misión",
+      "missionDescription": "Nuestra misión es entregar soluciones de software de alta calidad, confiables y escalables, que mejoren las operaciones comerciales y fomenten el crecimiento de nuestros clientes.",
+      
+      "visionTitle": "Nuestra Visión",
+      "visionDescription": "Visualizamos convertirnos en líderes globales en la provisión de soluciones tecnológicas innovadoras para empresas de diversas industrias, ayudándolas a tener éxito en un mundo digital en constante evolución.",
+      
+      "teamTitle": "Conoce a Nuestro Equipo",
+      "member1JobDescription": "John es el CEO de Sunday Software Solutions. Cuenta con más de 10 años de experiencia liderando empresas tecnológicas y es un apasionado de la innovación y el crecimiento empresarial.",
+      "member2JobDescription": "Jane es la CTO, supervisando la dirección técnica y asegurándose de que todos nuestros productos cumplan con los más altos estándares de calidad y rendimiento.",
+      "member3JobDescription": "Alex es nuestro Lead Developer, trabajando estrechamente con el equipo para construir soluciones robustas y escalables para nuestros clientes.",
+      
+      "locationTitle": "Nuestra Ubicación",
+      "locationDescription": "Estamos ubicados en el corazón de la ciudad, de fácil acceso y cerca de los principales centros de transporte.",
+      
+      "extraInfoTitle": "¿Por Qué Elegirnos?",
+      "extraInfoDescription": "Estamos comprometidos con la excelencia, la satisfacción del cliente y la mejora continua. Con un equipo altamente capacitado, garantizamos los mejores resultados para todos nuestros clientes."
+    },
+    "Contact": {
+      "title": "Contáctanos",
+      "introDescription": "¡Nos encantaría saber de ti! Por favor, completa el formulario a continuación y nuestro equipo se pondrá en contacto contigo lo antes posible.",
+      "formTitle": "Formulario de Contacto",
+      "name": "Nombre",
+      "company": "Compañía",
+      "requirementType": "Tipo de Requerimiento",
+      "selectRequirement": "Selecciona un Requerimiento",
+      "development": "Desarrollo",
+      "support": "Soporte",
+      "saas": "SaaS",
+      "bot": "Bot",
+      "other": "Otro",
+      "contactType": "Tipo de Contacto",
+      "selectContactType": "Selecciona Tipo de Contacto",
+      "phone": "Teléfono",
+      "email": "Correo Electrónico",
+      "projectDescription": "Descripción del Proyecto",
+      "businessSector": "Sector Comercial",
+      "orContactUs": "O contáctanos directamente:",
+      "submit": "Enviar",
+      "thankYouTitle": "¡Gracias!",
+      "thankYouMessage": "¡Gracias por ponerte en contacto con nosotros! Nos comunicaremos contigo lo antes posible. Redirigiendo a la página principal..."
+    },
+    "LocaleSwitcher": {
+      "label": "Cambiar idioma",
+      "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
+    }
+  }
