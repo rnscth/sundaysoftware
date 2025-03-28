@@ -1,6 +1,6 @@
 import {useTranslations} from 'next-intl';
 import Link from 'next/link';
-// import LocaleSwitcher from './locateSwitcher';
+import LocaleSwitcher from './locateSwitcher';
  
 export default function Nav() {
   const t = useTranslations('Nav');
@@ -15,7 +15,7 @@ export default function Nav() {
       <Link href="/About">{t('about')}</Link>
       <Link href="/Contact">{t('contact')}</Link>
       {/* <LanguageSwitcher /> Colocamos el LanguageSwitcher */}
-      {/* <LocaleSwitcher /> Agrega el selector de idioma */}
+      <LocaleSwitcher />
     </nav>
     
   </div>

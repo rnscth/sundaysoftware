@@ -81,16 +81,16 @@
       "name": "Nombre",
       "company": "Compañía",
       "requirementType": "Tipo de Requerimiento",
-      "selectRequirement": "Selecciona un Requerimiento",
+      "selectrequirementType": "Selecciona un Requerimiento",
       "development": "Desarrollo",
       "support": "Soporte",
       "saas": "SaaS",
       "bot": "Bot",
       "other": "Otro",
       "contactType": "Tipo de Contacto",
-      "selectContactType": "Selecciona Tipo de Contacto",
-      "phone": "Teléfono",
-      "email": "Correo Electrónico",
+      "selectcontactType": "Selecciona Tipo de Contacto",
+      "Phone": "Teléfono",
+      "Email": "Correo Electrónico",
       "projectDescription": "Descripción del Proyecto",
       "businessSector": "Sector Comercial",
       "orContactUs": "O contáctanos directamente:",
@@ -100,6 +100,6 @@
     },
     "LocaleSwitcher": {
       "label": "Cambiar idioma",
-      "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
+      "locale": "{locale, select, es {ES} en {EN} other {Unknown}}"
     }
   }

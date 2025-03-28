@@ -35,10 +35,10 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={`${inter.className} min-h-screen flex flex-col`}>
+      <NextIntlClientProvider>
         <header className="text-white p-4 text-center text-l font-bold">
           <Nav/>
         </header>
-        <NextIntlClientProvider>
           <AnimatedWrapper>
             {children}
           </AnimatedWrapper>
