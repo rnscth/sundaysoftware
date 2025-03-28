@@ -4,10 +4,22 @@ import { useTranslations } from 'next-intl';
 import { AiOutlineMail } from 'react-icons/ai'; // Icono de correo
 import { FaWhatsapp } from 'react-icons/fa'; // Icono de WhatsApp
 
+// Define el tipo para formData
+interface FormData {
+  name: string;
+  company: string;
+  requirementType: string;
+  contactType: string;
+  phone: string;
+  email: string;
+  projectDescription: string;
+  businessSector: string;
+}
+
 export default function Contact() {
   const t = useTranslations('Contact');
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     company: '',
     requirementType: '',
@@ -46,27 +58,72 @@ export default function Contact() {
 
       <section className="bg-gray-300 p-6 rounded-lg shadow-lg w-full max-w-lg">
         <form onSubmit={handleSubmit} className="space-y-4">
-          {['name', 'company', 'projectDescription', 'businessSector'].map((field) => (
-            <div key={field}>
-              <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor={field}>
-                {t(field)}
-              </label>
-              <input
-                type={field === 'projectDescription' ? 'textarea' : 'text'}
-                id={field}
-                name={field}
-                value={formData[field]}
-                onChange={handleChange}
-                className="w-full p-2 border border-gray-700 bg-white rounded-md text-black text-sm focus:ring-2 focus:ring-primary"
-                required
-              />
-            </div>
-          ))}
+
+          <div>
+            <label className="block text-sm font-medium mb-2" htmlFor="name">
+              {t('name')}
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full p-2 border border-gray-700 bg-white rounded-md text-black text-sm focus:ring-2 focus:ring-primary"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-2" htmlFor="company">
+              {t('company')}
+            </label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
+              className="w-full p-2 border border-gray-700 bg-white rounded-md text-black text-sm focus:ring-2 focus:ring-primary"
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-2" htmlFor="projectDescription">
+              {t('projectDescription')}
+            </label>
+            <textarea
+              id="projectDescription"
+              name="projectDescription"
+              value={formData.projectDescription}
+              onChange={handleChange}
+              className="w-full p-2 border border-gray-700 bg-white rounded-md text-black text-sm focus:ring-2 focus:ring-primary"
+              rows={3}
+              required
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium mb-2" htmlFor="businessSector">
+              {t('businessSector')}
+            </label>
+            <input
+              type="text"
+              id="businessSector"
+              name="businessSector"
+              value={formData.businessSector}
+              onChange={handleChange}
+              className="w-full p-2 border border-gray-700 bg-white rounded-md text-black text-sm focus:ring-2 focus:ring-primary"
+              required
+            />
+          </div>
+
 
 
 
             <div key={'requirementType'}>
-              <label className="block text-sm font-medium text-gray-400 mb-2" htmlFor={'requirementType'}>
+              <label className="block text-sm font-medium mb-2" htmlFor={'requirementType'}>
                 {t('requirementType')}
               </label>
               <select
@@ -85,7 +142,7 @@ export default function Contact() {
             </div>
 
             <div key={'contactType'}>
-              <label className="block text-sm font-medium text-gray-400 mb-2" htmlFor={'contactType'}>
+              <label className="block text-sm font-medium mb-2" htmlFor={'contactType'}>
                 {t('contactType')}
               </label>
               <select
@@ -106,7 +163,7 @@ export default function Contact() {
 
           {formData.contactType === 'Phone' && (
             <div>
-              <label className="block text-sm font-medium text-gray-400 mb-2" htmlFor="phone">
+              <label className="block text-sm font-medium mb-2" htmlFor="phone">
                 {t('Phone')}
               </label>
               <input
@@ -123,7 +180,7 @@ export default function Contact() {
 
           {formData.contactType === 'Email' && (
             <div>
-              <label className="block text-sm font-medium text-gray-400 mb-2" htmlFor="email">
+              <label className="block text-sm font-medium mb-2" htmlFor="email">
                 {t('Email')}
               </label>
               <input
