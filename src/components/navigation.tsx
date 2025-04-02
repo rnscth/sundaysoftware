@@ -1,14 +1,26 @@
-'use client'
+'use client';
+
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import LocaleSwitcher from './locateSwitcher';
 import { useLocale } from 'next-intl';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import LocaleSwitcher from './locateSwitcher';
 
 export default function Nav() {
-  const locale = useLocale();
+  const locale = useLocale(); // Obtén el idioma actual
   const t = useTranslations('Nav');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  const [currentLocale, setCurrentLocale] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Leer la cookie de idioma en el cliente
+    const localeCookie = document.cookie
+      .split('; ')
+      .find(row => row.startsWith('NEXT_LOCALE='))
+      ?.split('=')[1];
+    setCurrentLocale(localeCookie || 'en');
+  }, []);
 
   // Toggle mobile menu visibility
   const toggleMobileMenu = () => {
@@ -25,22 +37,27 @@ export default function Nav() {
       {/* Navigation Links */}
       <nav className="flex justify-between items-center sm:justify-center space-x-4 sm:space-x-8">
         <div className="hidden sm:flex space-x-4">
-          <Link href="/" locale={locale} className="text-sm sm:text-lg">
-            {t('home')}
-          </Link>
-          <Link href="/Services" locale={locale} className="text-sm sm:text-lg">
-            {t('services')}
-          </Link>
-          <Link href="/About" locale={locale} className="text-sm sm:text-lg">
-            {t('about')}
-          </Link>
-          <Link href="/Contact" locale={locale} className="text-sm sm:text-lg">
-            {t('contact')}
-          </Link>
+          {currentLocale && (
+            <>
+              <Link href={`/${currentLocale}/`} className="text-sm sm:text-lg">
+                {t('home')}
+              </Link>
+              <Link href={`/${currentLocale}/Services`} className="text-sm sm:text-lg">
+                {t('services')}
+              </Link>
+              <Link href={`/${currentLocale}/About`} className="text-sm sm:text-lg">
+                {t('about')}
+              </Link>
+              <Link href={`/${currentLocale}/Contact`} className="text-sm sm:text-lg">
+                {t('contact')}
+              </Link>
+            </>
+          )}
         </div>
 
+          <LocaleSwitcher/>
         {/* Locale Switcher */}
-        <LocaleSwitcher />
+        {/* Aquí incluirías tu selector de idioma */}
 
         {/* Mobile Menu Icon */}
         <div className="sm:hidden flex items-center">
@@ -53,37 +70,23 @@ export default function Nav() {
       {/* Mobile Menu - Conditional Rendering */}
       {isMobileMenuOpen && (
         <div className="sm:hidden absolute left-1/2 top-16 transform -translate-x-1/2 w-60 bg-white shadow-md rounded">
-
           <div className="flex flex-col items-center space-y-4 py-4">
-            <Link
-              href="/"
-              locale={locale}
-              className="text-sm sm:text-lg text-black"
-              onClick={toggleMobileMenu} // Close menu after click
-            >
-              {t('home')}
-            </Link>
-            <Link
-              href="/Services"
-              className="text-sm sm:text-lg text-black"
-              onClick={toggleMobileMenu}
-            >
-              {t('services')}
-            </Link>
-            <Link
-              href="/About"
-              className="text-sm sm:text-lg text-black"
-              onClick={toggleMobileMenu}
-            >
-              {t('about')}
-            </Link>
-            <Link
-              href="/Contact"
-              className="text-sm sm:text-lg text-black"
-              onClick={toggleMobileMenu}
-            >
-              {t('contact')}
-            </Link>
+            {currentLocale && (
+              <>
+                <Link href={`/${currentLocale}/`} className="text-sm sm:text-lg text-black" onClick={toggleMobileMenu}>
+                  {t('home')}
+                </Link>
+                <Link href={`/${currentLocale}/Services`} className="text-sm sm:text-lg text-black" onClick={toggleMobileMenu}>
+                  {t('services')}
+                </Link>
+                <Link href={`/${currentLocale}/About`} className="text-sm sm:text-lg text-black" onClick={toggleMobileMenu}>
+                  {t('about')}
+                </Link>
+                <Link href={`/${currentLocale}/Contact`} className="text-sm sm:text-lg text-black" onClick={toggleMobileMenu}>
+                  {t('contact')}
+                </Link>
+              </>
+            )}
           </div>
         </div>
       )}

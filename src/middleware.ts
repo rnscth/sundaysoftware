@@ -17,6 +17,9 @@ export function middleware(req: NextRequest) {
     if (!req.url.includes(`/${browserLang}`)) {
       return NextResponse.redirect(new URL(`/${browserLang}${req.url}`, req.url));
     }
+  } else {
+    // Si la cookie de idioma existe, configura la localización en base a ella
+    res.cookies.set('NEXT_LOCALE', localeCookie, { path: '/', maxAge: 31536000 });
   }
 
   return res;
