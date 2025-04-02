@@ -3,6 +3,7 @@
 import clsx from 'clsx';
 import {useParams} from 'next/navigation';
 import {Locale} from 'next-intl';
+import { useLocale } from 'next-intl';
 import {ChangeEvent, ReactNode, useTransition} from 'react';
 import {usePathname, useRouter} from '@/i18n/navigation';
 
@@ -17,6 +18,7 @@ export default function LocaleSwitcherSelect({
   defaultValue,
   label
 }: Props) {
+  const locale = useLocale(); // Obtiene el idioma actual de la app
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
@@ -45,7 +47,7 @@ export default function LocaleSwitcherSelect({
       <p className="sr-only">{label}</p>
       <select
         className="inline-flex appearance-none bg-transparent py-2 pl-2 pr-5"
-        defaultValue={defaultValue}
+        value={locale} // Cambiamos `defaultValue` por `value`
         disabled={isPending}
         onChange={onSelectChange}
       >
