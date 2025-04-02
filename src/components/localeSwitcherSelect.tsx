@@ -26,7 +26,11 @@ export default function LocaleSwitcherSelect({
 
   function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const nextLocale = event.target.value as Locale;
+
+    console.log('Cambiando idioma a:', nextLocale);
+
     startTransition(() => {
+      document.cookie = `NEXT_LOCALE=${nextLocale}; path=/; max-age=31536000`;
       router.replace(
         // @ts-expect-error -- TypeScript will validate that only known `params`
         // are used in combination with a given `pathname`. Since the two will
@@ -35,6 +39,8 @@ export default function LocaleSwitcherSelect({
         {locale: nextLocale}
       );
     });
+  
+  
   }
 
   return (

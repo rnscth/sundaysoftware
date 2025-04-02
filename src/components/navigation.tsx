@@ -28,13 +28,13 @@ export default function Nav() {
           <Link href="/" locale={locale} className="text-sm sm:text-lg">
             {t('home')}
           </Link>
-          <Link href="/Services" className="text-sm sm:text-lg">
+          <Link href="/Services" locale={locale} className="text-sm sm:text-lg">
             {t('services')}
           </Link>
-          <Link href="/About" className="text-sm sm:text-lg">
+          <Link href="/About" locale={locale} className="text-sm sm:text-lg">
             {t('about')}
           </Link>
-          <Link href="/Contact" className="text-sm sm:text-lg">
+          <Link href="/Contact" locale={locale} className="text-sm sm:text-lg">
             {t('contact')}
           </Link>
         </div>

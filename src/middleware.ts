@@ -8,13 +8,20 @@ export function middleware(req: NextRequest) {
   // Verifica si la cookie de idioma ya existe
   const localeCookie = req.cookies.get('NEXT_LOCALE')?.value;
 
+  // Si no existe la cookie de idioma, determinar el idioma predeterminado
   if (!localeCookie) {
     const browserLang = req.headers.get("accept-language")?.split(",")[0].split("-")[0] || "en";
     res.cookies.set('NEXT_LOCALE', browserLang, { path: '/', maxAge: 31536000 });
+
+    // Redirige al idioma adecuado si no se encuentra en la URL
+    if (!req.url.includes(`/${browserLang}`)) {
+      return NextResponse.redirect(new URL(`/${browserLang}${req.url}`, req.url));
+    }
   }
+
   return res;
 }
 
 export const config = {
-  matcher: '/((?!api|trpc|_next|_vercel|.*\\..*).*)'
+  matcher: '/((?!api|trpc|_next|_vercel|.*\\..*).*)',
 };
