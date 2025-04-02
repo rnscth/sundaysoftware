@@ -9,9 +9,9 @@ export function middleware(req: NextRequest) {
   const localeCookie = req.cookies.get('NEXT_LOCALE')?.value;
 
   if (!localeCookie) {
-    res.cookies.set('NEXT_LOCALE', 'en', { path: '/', maxAge: 31536000 }); // Fijamos 'en' si no existe
+    const browserLang = req.headers.get("accept-language")?.split(",")[0].split("-")[0] || "en";
+    res.cookies.set('NEXT_LOCALE', browserLang, { path: '/', maxAge: 31536000 });
   }
-
   return res;
 }
 
