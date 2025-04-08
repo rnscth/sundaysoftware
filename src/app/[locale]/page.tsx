@@ -24,7 +24,7 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-100 to-gray-300 min-h-screen py-12 px-6">
+      <div className="container mx-auto px-6 py-12 bg-gradient-to-b from-gray-100 to-gray-300">
       {/* Hero Section */}
       <section className="text-center mb-16">
         <h1 className="text-5xl font-bold text-gray-800 animate-fade-in">{t('title')}</h1>
