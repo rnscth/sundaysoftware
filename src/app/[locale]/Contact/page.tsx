@@ -210,11 +210,11 @@ export default function Contact() {
       <section className="mt-8 text-center">
         <p className="text-lg text-gray-700">{t('orContactUs')}</p>
         <div className="flex justify-center gap-6 mt-4">
-          <a href="mailto:contact@sundaysoftware.com" className="flex items-center gap-2 text-primary hover:text-primary-light transition">
-            <AiOutlineMail size={24} /> contact@sundaysoftware.com
+          <a href="mailto:Sunday.Software.Solutuions@gmail.com" className="flex items-center gap-2 text-primary hover:text-primary-light transition">
+            <AiOutlineMail size={24} /> Sunday.Software.Solutuions@gmail.com
           </a>
-          <a href="https://wa.me/+1234567890" className="flex items-center gap-2 text-green-500 hover:text-green-400 transition">
-            <FaWhatsapp size={24} /> +1 234 567 890
+          <a href="https://wa.me/+526865254888" className="flex items-center gap-2 text-green-500 hover:text-green-400 transition">
+            <FaWhatsapp size={24} /> +52 686 552 4888
           </a>
         </div>
       </section>

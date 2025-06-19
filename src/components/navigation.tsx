@@ -7,14 +7,13 @@ import { useState, useEffect } from 'react';
 import LocaleSwitcher from './locateSwitcher';
 
 export default function Nav() {
-  const locale = useLocale(); // Obtén el idioma actual
+  const locale = useLocale(); 
   const t = useTranslations('Nav');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const [currentLocale, setCurrentLocale] = useState<string | null>(null);
 
   useEffect(() => {
-    // Leer la cookie de idioma en el cliente
     const localeCookie = document.cookie
       .split('; ')
       .find(row => row.startsWith('NEXT_LOCALE='))
@@ -56,8 +55,6 @@ export default function Nav() {
         </div>
 
           <LocaleSwitcher/>
-        {/* Locale Switcher */}
-        {/* Aquí incluirías tu selector de idioma */}
 
         {/* Mobile Menu Icon */}
         <div className="sm:hidden flex items-center">
