@@ -7,6 +7,7 @@ import {routing} from '@/i18n/routing';
 import { Inter } from "next/font/google";
 import Footer from "@/components/footer";
 import Nav from "@/components/navigation";
+import FocusOnRouteChange from "@/components/focusOnRouteChange";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export async function generateMetadata({
   const {locale} = await params;
   const t = await getTranslations({locale, namespace: 'Metadata'});
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
     title: t('title'),
     description: t('description'),
   };
@@ -44,12 +46,13 @@ export default async function LocaleLayout({
       <body className={`${inter.className} min-h-screen flex flex-col`}>
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-gray-800 focus:text-white focus:rounded-lg"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:px-4 focus:py-2 focus:bg-deep-slate focus:text-card-surface focus:rounded-lg"
         >
           {t('skipToContent')}
         </a>
         <NextIntlClientProvider messages={messages}>
-          <header className="text-white p-4">
+          <FocusOnRouteChange />
+          <header className="text-card-surface p-4">
             <Nav/>
           </header>
           {children}

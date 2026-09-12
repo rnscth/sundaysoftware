@@ -1,4 +1,6 @@
+import { getTranslations } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
+import type { Metadata } from 'next';
 import {
   FaCode,
   FaHeadset,
@@ -8,6 +10,19 @@ import {
   FaMicrosoft,
 } from 'react-icons/fa';
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
+  return {
+    title: t('pages.services.title'),
+    description: t('pages.services.description'),
+  };
+}
+
 export default function Services() {
   const t = useTranslations('Services');
 
@@ -16,7 +31,7 @@ export default function Services() {
       id: 'development',
       title: t('developmentTitle'),
       description: t('developmentDescription'),
-      icon: <FaCode className="text-5xl text-blue-600" aria-hidden="true" />,
+      icon: <FaCode className="text-5xl text-code-blue" aria-hidden="true" />,
       items: [
         t('customSoftwareDevelopment'),
         t('mobileAppDevelopment'),
@@ -28,7 +43,7 @@ export default function Services() {
       id: 'support',
       title: t('supportTitle'),
       description: t('supportDescription'),
-      icon: <FaHeadset className="text-5xl text-green-600" aria-hidden="true" />,
+      icon: <FaHeadset className="text-5xl text-support-green" aria-hidden="true" />,
       items: [
         t('itSupport'),
         t('helpDeskServices'),
@@ -39,7 +54,7 @@ export default function Services() {
       id: 'saas',
       title: t('saasTitle'),
       description: t('saasDescription'),
-      icon: <FaCloud className="text-5xl text-purple-600" aria-hidden="true" />,
+      icon: <FaCloud className="text-5xl text-cloud-purple" aria-hidden="true" />,
       items: [
         t('customSaaSDevelopment'),
         t('cloudSolutions'),
@@ -50,7 +65,7 @@ export default function Services() {
       id: 'bots',
       title: t('botsTitle'),
       description: t('botsDescription'),
-      icon: <FaRobot className="text-5xl text-yellow-600" aria-hidden="true" />,
+      icon: <FaRobot className="text-5xl text-bot-gold" aria-hidden="true" />,
       items: [
         t('whatsappBots'),
         t('customerSupportBots'),
@@ -62,7 +77,7 @@ export default function Services() {
       id: 'ai',
       title: t('aiTitle'),
       description: t('aiDescription'),
-      icon: <FaBrain className="text-5xl text-red-600" aria-hidden="true" />,
+      icon: <FaBrain className="text-5xl text-ai-red" aria-hidden="true" />,
       items: [
         t('aiWorkflowAutomation'),
         t('customAiAgents'),
@@ -74,7 +89,7 @@ export default function Services() {
       id: 'microsoft',
       title: t('microsoftTitle'),
       description: t('microsoftDescription'),
-      icon: <FaMicrosoft className="text-5xl text-blue-500" aria-hidden="true" />,
+      icon: <FaMicrosoft className="text-5xl text-microsoft-blue" aria-hidden="true" />,
       items: [
         t('entraId'),
         t('entraAppProxy'),
@@ -86,20 +101,20 @@ export default function Services() {
 
   return (
     <div className="container mx-auto max-w-6xl px-6 py-12">
-      <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">{t('title')}</h1>
+      <h1 className="text-4xl font-bold text-center text-deep-slate mb-12">{t('title')}</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {services.map((service) => (
           <div
             key={service.id}
-            className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-[box-shadow,transform] duration-300"
+            className="bg-card-surface p-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-[box-shadow,transform] duration-300 ease-smooth"
           >
             <div className="flex items-center mb-4">
               {service.icon}
-              <h2 className="text-2xl font-semibold text-gray-800 ml-4">{service.title}</h2>
+              <h2 className="text-2xl font-semibold text-deep-slate ml-4">{service.title}</h2>
             </div>
-            <p className="text-lg text-gray-700 mb-4">{service.description}</p>
-            <ul className="list-disc pl-6 text-gray-600">
+            <p className="text-lg text-mid-slate mb-4">{service.description}</p>
+            <ul className="list-disc pl-6 text-muted-ink">
               {service.items.map((item) => (
                 <li key={item} className="mb-2">{item}</li>
               ))}

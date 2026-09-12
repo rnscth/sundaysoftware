@@ -37,7 +37,7 @@ Confirmed service catalog:
 - AI-driven automation: workflow automation, custom AI agents, Copilot Studio copilots, document processing.
 - Microsoft cloud & identity: Entra ID, Entra Application Proxy, SSO/MFA integration, Power Platform automation.
 
-Technical constraints: Next.js 15 App Router, React 19, TypeScript strict, Tailwind v4 (CSS-config theme), next-intl i18n, Framer Motion; email via Nodemailer + Gmail requiring `SMTP_USER`/`SMTP_PASS`; deploys to Vercel.
+Technical constraints: Next.js 15 App Router, React 19, TypeScript strict, Tailwind v4 (CSS-config theme), next-intl i18n; page transitions via CSS-only `.page-enter` (no animation library); email via Nodemailer + Gmail requiring `SMTP_USER`/`SMTP_PASS`; deploys to Vercel.
 
 Undecided product facts (do not invent): real team members (the placeholder team was removed and substituted by a capabilities section), real client cases or testimonials, precise office address.
 

@@ -10,6 +10,7 @@ type ContactPayload = {
   email: string;
   projectDescription: string;
   businessSector: string;
+  website: string;
 };
 
 const REQUIREMENT_TYPES = new Set([
@@ -33,10 +34,31 @@ const LIMITS: Record<keyof ContactPayload, number> = {
   email: 254,
   projectDescription: 3000,
   businessSector: 120,
+  website: 80,
 };
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_REGEX = /^[0-9()+\-\s]{7,20}$/;
+
+const RATE_WINDOW_MS = 10 * 60 * 1000;
+const RATE_MAX_PER_WINDOW = 5;
+const rateLimit = new Map<string, {count: number; resetAt: number}>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  if (rateLimit.size > 1000) {
+    for (const [key, entry] of rateLimit) {
+      if (entry.resetAt < now) rateLimit.delete(key);
+    }
+  }
+  const entry = rateLimit.get(ip);
+  if (!entry || entry.resetAt < now) {
+    rateLimit.set(ip, {count: 1, resetAt: now + RATE_WINDOW_MS});
+    return false;
+  }
+  entry.count += 1;
+  return entry.count > RATE_MAX_PER_WINDOW;
+}
 
 const escapeHtml = (value: string) =>
   value
@@ -52,6 +74,21 @@ export async function POST(request: Request) {
     body = (await request.json()) as Partial<ContactPayload>;
   } catch {
     return NextResponse.json({ message: 'Invalid request body' }, { status: 400 });
+  }
+
+  if (!body || Object.keys(body).length === 0) {
+    return NextResponse.json({ message: 'Empty request body' }, { status: 400 });
+  }
+
+  const forwarded = request.headers.get('x-forwarded-for');
+  const clientIp = forwarded?.split(',')[0]?.trim() ?? 'unknown';
+  if (isRateLimited(clientIp)) {
+    return NextResponse.json({ message: 'Too many requests' }, { status: 429 });
+  }
+
+  const website = body.website?.trim() ?? '';
+  if (website) {
+    return NextResponse.json({ message: 'Email sent successfully' });
   }
 
   try {
@@ -101,7 +138,7 @@ export async function POST(request: Request) {
     }
 
     const overLimit = (Object.keys(LIMITS) as (keyof ContactPayload)[]).find((field) => {
-      const value = { name, company, requirementType, contactType, phone, email, projectDescription, businessSector }[field] ?? '';
+      const value = { name, company, requirementType, contactType, phone, email, projectDescription, businessSector, website }[field] ?? '';
       return value.length > LIMITS[field];
     });
     if (overLimit) {

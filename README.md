@@ -11,7 +11,6 @@ Sitio web corporativo de **Sunday Software Solutions**: empresa de desarrollo de
 | TypeScript | 5 | Tipado estático |
 | Tailwind CSS | 4 | Estilos (configuración vía CSS, no `tailwind.config`) |
 | next-intl | 4 | Internacionalización (EN/ES) |
-| Framer Motion | 12 | Animaciones y transiciones de página |
 | Nodemailer | 7 | Envío de correos desde la API |
 
 ## Requisitos previos

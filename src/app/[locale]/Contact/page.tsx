@@ -14,6 +14,7 @@ interface FormData {
   email: string;
   projectDescription: string;
   businessSector: string;
+  website: string;
 }
 
 type FieldName = keyof FormData;
@@ -29,10 +30,22 @@ const initialFormData: FormData = {
   email: '',
   projectDescription: '',
   businessSector: '',
+  website: '',
 };
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_REGEX = /^[0-9()+\-\s]{7,20}$/;
+
+const REQUIRED_FIELDS: FieldName[] = [
+  'name',
+  'company',
+  'projectDescription',
+  'businessSector',
+  'requirementType',
+  'contactType',
+  'phone',
+  'email',
+];
 
 export default function Contact() {
   const t = useTranslations('Contact');
@@ -51,6 +64,15 @@ export default function Contact() {
       abortControllerRef.current?.abort();
     };
   }, []);
+
+  useEffect(() => {
+    if (!showModal) return;
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [showModal]);
 
   useEffect(() => {
     if (!showModal || !dialogRef.current) return;
@@ -122,6 +144,8 @@ export default function Contact() {
     const nextErrors = validateForm();
     if (Object.values(nextErrors).some((message) => message)) {
       setErrors(nextErrors);
+      const firstInvalid = REQUIRED_FIELDS.find((field) => nextErrors[field]);
+      if (firstInvalid) document.getElementById(firstInvalid)?.focus();
       return;
     }
     setErrors({});
@@ -153,11 +177,11 @@ export default function Contact() {
   };
 
   const inputClass =
-    'w-full p-2 border border-gray-700 bg-white rounded-md text-black text-sm focus:ring-2 focus:ring-gray-800';
+    'w-full p-2 border border-mid-slate bg-card-surface rounded-md text-wet-ink text-sm focus:ring-2 focus:ring-deep-slate';
 
   const renderError = (field: FieldName) =>
     errors[field] ? (
-      <p id={`${field}-error`} role="alert" className="text-red-600 text-sm mt-1">
+      <p id={`${field}-error`} role="alert" className="text-error text-sm mt-1">
         {errors[field]}
       </p>
     ) : null;
@@ -165,20 +189,41 @@ export default function Contact() {
   const fieldAria = (field: FieldName) => ({
     'aria-invalid': errors[field] ? true : undefined,
     'aria-describedby': errors[field] ? `${field}-error` : undefined,
+    'aria-required': REQUIRED_FIELDS.includes(field) || undefined,
   });
+
+  const requiredLabel = (label: string) => (
+    <>
+      {label} <span aria-hidden="true" className="text-error">*</span>
+      <span className="sr-only">{t('requiredLabel')}</span>
+    </>
+  );
 
   return (
     <div className="container mx-auto max-w-6xl px-6 py-12 flex flex-col items-center">
       <section className="text-center mb-8">
-        <h1 className="text-4xl font-bold mb-4 text-gray-800">{t('title')}</h1>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto">{t('introDescription')}</p>
+        <h1 className="text-4xl font-bold mb-4 text-deep-slate">{t('title')}</h1>
+        <p className="text-lg text-mid-slate max-w-2xl mx-auto">{t('introDescription')}</p>
       </section>
 
-      <section className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
+      <section className="bg-card-surface p-6 rounded-lg shadow-lg w-full max-w-lg">
         <form onSubmit={handleSubmit} noValidate className="space-y-4">
+          <div className="sr-only">
+            <label htmlFor="website">Website</label>
+            <input
+              type="text"
+              id="website"
+              name="website"
+              value={formData.website}
+              onChange={handleChange}
+              autoComplete="off"
+              tabIndex={-1}
+            />
+          </div>
+
           <div>
             <label className="block text-sm font-medium mb-2" htmlFor="name">
-              {t('name')}
+              {requiredLabel(t('name'))}
             </label>
             <input
               type="text"
@@ -188,6 +233,7 @@ export default function Contact() {
               onChange={handleChange}
               className={inputClass}
               maxLength={120}
+              autoComplete="name"
               {...fieldAria('name')}
             />
             {renderError('name')}
@@ -195,7 +241,7 @@ export default function Contact() {
 
           <div>
             <label className="block text-sm font-medium mb-2" htmlFor="company">
-              {t('company')}
+              {requiredLabel(t('company'))}
             </label>
             <input
               type="text"
@@ -205,6 +251,7 @@ export default function Contact() {
               onChange={handleChange}
               className={inputClass}
               maxLength={120}
+              autoComplete="organization"
               {...fieldAria('company')}
             />
             {renderError('company')}
@@ -212,7 +259,7 @@ export default function Contact() {
 
           <div>
             <label className="block text-sm font-medium mb-2" htmlFor="projectDescription">
-              {t('projectDescription')}
+              {requiredLabel(t('projectDescription'))}
             </label>
             <textarea
               id="projectDescription"
@@ -229,7 +276,7 @@ export default function Contact() {
 
           <div>
             <label className="block text-sm font-medium mb-2" htmlFor="businessSector">
-              {t('businessSector')}
+              {requiredLabel(t('businessSector'))}
             </label>
             <input
               type="text"
@@ -246,7 +293,7 @@ export default function Contact() {
 
           <div>
             <label className="block text-sm font-medium mb-2" htmlFor="requirementType">
-              {t('requirementType')}
+              {requiredLabel(t('requirementType'))}
             </label>
             <select
               id="requirementType"
@@ -266,7 +313,7 @@ export default function Contact() {
 
           <div>
             <label className="block text-sm font-medium mb-2" htmlFor="contactType">
-              {t('contactType')}
+              {requiredLabel(t('contactType'))}
             </label>
             <select
               id="contactType"
@@ -287,7 +334,7 @@ export default function Contact() {
           {formData.contactType === 'Phone' && (
             <div>
               <label className="block text-sm font-medium mb-2" htmlFor="phone">
-                {t('Phone')}
+                {requiredLabel(t('Phone'))}
               </label>
               <input
                 type="tel"
@@ -297,6 +344,7 @@ export default function Contact() {
                 onChange={handleChange}
                 className={inputClass}
                 maxLength={20}
+                autoComplete="tel"
                 {...fieldAria('phone')}
               />
               {renderError('phone')}
@@ -306,7 +354,7 @@ export default function Contact() {
           {formData.contactType === 'Email' && (
             <div>
               <label className="block text-sm font-medium mb-2" htmlFor="email">
-                {t('Email')}
+                {requiredLabel(t('Email'))}
               </label>
               <input
                 type="email"
@@ -316,6 +364,7 @@ export default function Contact() {
                 onChange={handleChange}
                 className={inputClass}
                 maxLength={254}
+                autoComplete="email"
                 {...fieldAria('email')}
               />
               {renderError('email')}
@@ -323,7 +372,7 @@ export default function Contact() {
           )}
 
           {formError && (
-            <p className="text-red-600 text-sm" role="alert">
+            <p className="text-error text-sm" role="alert">
               {formError}
             </p>
           )}
@@ -332,7 +381,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-6 py-3 bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-700 disabled:opacity-60 transform hover:scale-105 transition-[box-shadow,transform] duration-300 focus-visible:ring-2 focus-visible:ring-gray-800 focus-visible:ring-offset-2 focus-visible:outline-none"
+              className="px-6 py-3 bg-deep-slate text-card-surface rounded-lg shadow-md hover:bg-mid-slate disabled:opacity-60 transform hover:scale-105 transition-[box-shadow,transform,background-color] duration-300 ease-smooth focus-visible:ring-2 focus-visible:ring-deep-slate focus-visible:ring-offset-2 focus-visible:outline-none"
             >
               {isSubmitting ? t('sending') : t('submit')}
             </button>
@@ -341,19 +390,19 @@ export default function Contact() {
       </section>
 
       <section className="mt-8 text-center">
-        <p className="text-lg text-gray-700">{t('orContactUs')}</p>
+        <p className="text-lg text-mid-slate">{t('orContactUs')}</p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-4">
           <a
             href="mailto:Sunday.Software.Solutions@gmail.com"
-            className="flex items-center gap-2 text-gray-800 hover:text-gray-600 transition"
+            className="flex items-center gap-2 py-3 rounded text-deep-slate hover:text-muted-ink transition-colors duration-200 ease-smooth focus-visible:ring-2 focus-visible:ring-deep-slate focus-visible:ring-offset-2 focus-visible:outline-none break-all"
           >
             <AiOutlineMail size={24} aria-hidden="true" /> Sunday.Software.Solutions@gmail.com
           </a>
           <a
             href="https://wa.me/+526865254888"
-            className="flex items-center gap-2 text-green-800 hover:text-green-700 transition"
+            className="flex items-center gap-2 py-3 rounded text-deep-slate hover:text-muted-ink transition-colors duration-200 ease-smooth focus-visible:ring-2 focus-visible:ring-deep-slate focus-visible:ring-offset-2 focus-visible:outline-none"
           >
-            <FaWhatsapp size={24} aria-hidden="true" /> +52 686 525 4888
+            <FaWhatsapp size={24} className="text-support-green" aria-hidden="true" /> +52 686 525 4888
           </a>
         </div>
       </section>
@@ -361,23 +410,24 @@ export default function Contact() {
       {showModal && (
         <div
           ref={dialogRef}
-          className="fixed inset-0 bg-black/60 flex justify-center items-center z-50"
+          className="fixed inset-0 bg-overlay flex justify-center items-center z-50"
           role="dialog"
           aria-modal="true"
           aria-labelledby="success-title"
+          aria-describedby="success-message"
         >
-          <div className="bg-gray-700 p-6 rounded-lg max-w-sm w-full mx-4 text-center shadow-lg relative">
+          <div className="bg-mid-slate p-6 rounded-lg max-w-sm w-full mx-4 text-center shadow-lg relative">
             <button
               id="success-close"
               type="button"
               onClick={closeAndRedirect}
               aria-label={t('close')}
-              className="absolute top-3 right-3 text-gray-300 hover:text-white transition focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
+              className="absolute top-1 right-1 p-2 min-h-11 min-w-11 flex items-center justify-center text-ash hover:text-card-surface transition-colors duration-200 ease-smooth focus-visible:ring-2 focus-visible:ring-card-surface focus-visible:outline-none"
             >
               <AiOutlineClose size={20} aria-hidden="true" />
             </button>
-            <h2 id="success-title" className="text-white text-xl font-semibold mb-4">{t('thankYouTitle')}</h2>
-            <p className="text-gray-300">{t('thankYouMessage')}</p>
+            <h2 id="success-title" className="text-card-surface text-xl font-semibold mb-4">{t('thankYouTitle')}</h2>
+            <p id="success-message" className="text-ash">{t('thankYouMessage')}</p>
           </div>
         </div>
       )}

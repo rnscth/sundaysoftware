@@ -1,7 +1,21 @@
 {
   "Metadata": {
     "title": "Sunday Software Solutions",
-    "description": "Custom software development, SaaS, AI-driven automation with Microsoft Copilot Studio, and Microsoft Entra identity solutions."
+    "description": "Custom software development, SaaS, AI-driven automation with Microsoft Copilot Studio, and Microsoft Entra identity solutions.",
+    "pages": {
+      "services": {
+        "title": "Services | Sunday Software Solutions",
+        "description": "Custom software, SaaS, bots, AI-driven automation with Microsoft Copilot Studio, and Microsoft Entra identity solutions."
+      },
+      "about": {
+        "title": "About Us | Sunday Software Solutions",
+        "description": "We are a nearshore software company focused on custom development, AI-driven automation and Microsoft cloud solutions for SMBs."
+      },
+      "contact": {
+        "title": "Contact Us | Sunday Software Solutions",
+        "description": "Tell us about your project: custom software, SaaS, bots, AI automation or Microsoft Cloud. We will get back to you shortly."
+      }
+    }
   },
   "HomePage": {
     "title": "Welcome to Sunday Software Solutions",
@@ -129,6 +143,7 @@
     "networkError": "We couldn't reach the server. Please check your internet connection and try again.",
     "close": "Close",
     "requiredError": "This field is required.",
+    "requiredLabel": " (required)",
     "invalidEmailError": "Please enter a valid email address.",
     "invalidPhoneError": "Please enter a valid phone number.",
     "thankYouTitle": "Thank You!",

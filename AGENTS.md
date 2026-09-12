@@ -32,8 +32,8 @@ Nota: `npm run lint` usa `next lint`, deprecado en Next 15 y no hay configuraci�
 
 ### 4. Estilos (Tailwind v4)
 - Configuración vía CSS en `src/app/globals.css` (`@import "tailwindcss"` y `@theme`). No existe `tailwind.config`.
-- **Solo usar clases de utilidad válidas de Tailwind.** Clases inventadas como `text-l`, `animate-fade-in`, `text-primary`, `bg-primary` no existen y rompen silenciosamente. Para la animación de entrada existe `.fade-in` en `globals.css`.
-- Mantener un esquema visual coherente: la cabecera/pie usan fondo oscuro (`--primary-color`), las páginas usan degradados grises y los CTA/botones en `bg-gray-800`/`hover:bg-gray-700`. No mezclar temas arbitrariamente.
+- **Solo usar clases de utilidad válidas de Tailwind.** Clases inventadas como `text-l`, `animate-fade-in`, `text-primary`, `bg-primary` no existen y rompen silenciosamente. Para la animación de cambio de página existe `.page-enter` en `globals.css`.
+- Mantener un esquema visual coherente: la cabecera/pie usan el fondo oscuro definido por los tokens `--color-charcoal-slate`/`--color-deep-slate`, las páginas usan el degradado `from-fog to-ash` y los CTA/botones en `bg-deep-slate`/`hover:bg-mid-slate`. Los colores quedan centralizados en `@theme` en `globals.css` (ver `DESIGN.md`); no mezclar clases de paleta por defecto de Tailwind a menos que haya un token que las reemplace.
 
 ### 5. Tipos y calidad
 - Mantener `strict` TypeScript. Correr `npx tsc --noEmit` al terminar.

@@ -16,11 +16,11 @@ colors:
   locale-ink: "#9ca3af"
   code-blue: "#2563eb"
   cloud-purple: "#9333ea"
-  bot-gold: "#ca8a04"
+  bot-gold: "#a16207"
   ai-red: "#dc2626"
   microsoft-blue: "#3b82f6"
   support-green: "#16a34a"
-  security-teal: "#0d9488"
+  error: "#dc2626"
 typography:
   display:
     fontFamily: "Inter, Arial, Helvetica, sans-serif"
@@ -117,7 +117,7 @@ A cool slate-and-grey family with a restrained spectrum of tool colors used only
 - **Card Surface** (#ffffff): every content panel — service cards, form card, About panels, mobile menu.
 - **Wet Ink** (#333333): default body text from the global stylesheet.
 - **Muted Ink** (#4b5563): secondary body tones, list items, hero description (text-gray-600).
-- **Faint Ink** (#6b7280): tertiary — loading text, team roles (text-gray-500).
+- **Faint Ink** (#6b7280): tertiary body tones (text-gray-500).
 - **Locale Ink** (#9ca3af): the language switcher on the dark header (text-gray-400).
 - **Fog** (#f3f4f6) / **Ash** (#d1d5db): the page shell — a soft top-down grey gradient (from-gray-100 to-gray-300) behind all white panels.
 - **Mist Grey** (#9a9fa3): legacy global page background; the field the gradient sits on.
@@ -126,11 +126,11 @@ A cool slate-and-grey family with a restrained spectrum of tool colors used only
 ### Tool Spectrum (icons, 600-scale accents)
 - **Code Blue** (#2563eb): software development.
 - **Cloud Purple** (#9333ea): SaaS and cloud solutions.
-- **Bot Gold** (#ca8a04): bots and messaging.
+- **Bot Gold** (#a16207): bots and messaging. **Deliberate deviation from the original #ca8a04:** darkened one step (yellow-700) so the icon clears the 3:1 non-text contrast threshold on white cards.
 - **AI Red** (#dc2626): AI-driven automation.
 - **Microsoft Blue** (#3b82f6): Copilot Studio and Microsoft platform.
 - **Support Green** (#16a34a): technical support.
-- **Security Teal** (#0d9488): Entra and identity.
+- **Error** (#dc2626): inline form errors and the required asterisk (alias of AI Red — same value, semantic name).
 
 **The Workbench Rule.** Dark charcoal surfaces exist only as structure — the header, the footer, the button fill. The grey gradient field is never replaced with a dark or saturated background.
 
@@ -161,7 +161,7 @@ Every page is a single centered container (`container mx-auto`) with horizontal 
 
 - Home: hero (centered), then a service-card grid that is 1 column mobile → 2 columns at `md` (768px) → 3 columns at `lg` (1024px), then a centered CTA section.
 - Services: a 1 → 2-column grid of service panels at `md`.
-- About: centered intro, stacked white panels (mission/vision, location), then a 1 → 2 → 3-column team grid.
+- About: centered intro, stacked white panels (mission/vision, location), then a 1 → 3-column capabilities grid at `md` ("What We Offer").
 - Contact: centered intro, a single white form card constrained to `max-w-lg` (~512px), then direct contact channels.
 - Mobile: cards collapse to a single column; the nav collapses to brand + locale switcher + a hamburger that opens a white dropdown menu (`w-60`, centered under the header).
 - Column gaps use the 40px column gap; internal card padding is 32px; page vertical sections are spaced at 48px.
@@ -169,6 +169,8 @@ Every page is a single centered container (`container mx-auto`) with horizontal 
 ## Elevation & Depth
 
 Flat by default. The visual world is two-dimensional — dark frame, grey field, white panels — and depth appears only as a response to interaction plus one persistent control shadow. No permanent card elevation, no floating surfaces at rest.
+
+Interaction motion uses a single decelerate easing token, `--ease-smooth` (`cubic-bezier(0.22, 1, 0.36, 1)`): fast start, slow settle — no linear, no bounce. It applies to every lift, shadow change, background/color fade and page-transition; it is disabled entirely under `prefers-reduced-motion`.
 
 ### Shadow Vocabulary
 - **control-rest** (`0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1)`, shadow-md): the resting state of buttons and the white mobile menu; also the map embed.
@@ -180,7 +182,7 @@ Flat by default. The visual world is two-dimensional — dark frame, grey field,
 
 ## Shapes
 
-A soft, rounded-rectangle form language with discipline on which radius goes where: cards and buttons are gently rounded (8px, rounded-lg), form controls are a step tighter (6px, rounded-md), avatars are circles (rounded-full), and the nav-link hover is a small soft pill on the header (5px). This is the classic "white card on grey field" idiom — corners are soft enough to feel friendly to non-technical owners, never pill-shaped or gimmicky. Borders are rare on cards; separation comes from the grey field and shadows rather than strokes. Global `.button`/`.fade-in` legacy styles in `globals.css` are dead surface; the active system is the Tailwind utility set described here.
+A soft, rounded-rectangle form language with discipline on which radius goes where: cards and buttons are gently rounded (8px, rounded-lg), form controls are a step tighter (6px, rounded-md), and the nav-link hover is a small soft pill on the header (5px). This is the classic "white card on grey field" idiom — corners are soft enough to feel friendly to non-technical owners, never pill-shaped or gimmicky. Borders are rare on cards; separation comes from the grey field and shadows rather than strokes. Global legacy styles in `globals.css` are dead surface; the active system is the Tailwind utility set described here.
 
 ## Components
 
@@ -203,7 +205,7 @@ A soft, rounded-rectangle form language with discipline on which radius goes whe
 - **Style:** white fill, 1px Mid Slate (#374151) stroke, 6px radius, padding 8px, text-sm.
 - **Focus:** 2px Deep Slate ring (focus:ring-2) swapping the border color; no glow, no color.
 - **Labels:** 12px-above text-sm font-medium in ink.
-- **Error / Disabled:** inline error text in outlined red (`text-red-600`) under the field; submit disabled at 60% opacity.
+- **Error / Disabled:** inline error text in `text-error` under the field; submit disabled at 60% opacity.
 
 ### Navigation
 - **Style:** the dark Charcoal Slate header bar (`#2f3337`), white text, brand name at text-xl/2xl semibold on the left, centered links on desktop.
@@ -218,8 +220,13 @@ A soft, rounded-rectangle form language with discipline on which radius goes whe
 - **Style:** full-screen Black 60% overlay, a Mid Slate (#374151) panel at 24px padding, 8px radius, `max-w-sm` (~384px).
 - **Content:** white semibold title (text-xl), light ash body text (text-gray-300); focus is trapped inside the dialog (Escape or the close button) and close navigates home. **Deliberate deviation from the original "auto-navigates home after 3s":** the timer was dropped for WCAG 2.2.1 (no adjustable time limit); navigation happens only on explicit user action.
 
-### Team Avatar
-- **Style:** 128px circle with `object-fit: cover`, centered above name/role; role text in Faint Ink.
+## App Icon
+
+The brand mark is the **Sunrise S**: a warm, flowing "S" traced by two thick rounded strokes on a midnight-blue rounded square (`rx≈0.22`). The upper curve is sunrise amber and the lower curve ivory, so the mark reads as a sunrise over a continuous, flowing process — Sunday + software process. A small amber sun dot sits at the top-right. Pure vector strokes, no font dependency, so it rasterizes identically everywhere.
+
+- **Colors (brand mark only, not in the component palette):** midnight `#101C2C`, sunrise amber `#FFB547`, ivory `#F5F0E6`.
+- `src/app/icon.svg` is the favicon (served by Next at `/icon.svg`).
+- `src/app/apple-icon.png` (180×180, generated from the SVG with `sharp`) is the iOS home-screen/touch icon.
 
 ## Do's and Don'ts
 

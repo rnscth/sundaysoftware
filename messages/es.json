@@ -1,7 +1,21 @@
 {
   "Metadata": {
     "title": "Sunday Software Solutions",
-    "description": "Desarrollo de software personalizado, SaaS, automatización impulsada por IA con Microsoft Copilot Studio y soluciones de identidad con Microsoft Entra."
+    "description": "Desarrollo de software personalizado, SaaS, automatización impulsada por IA con Microsoft Copilot Studio y soluciones de identidad con Microsoft Entra.",
+    "pages": {
+      "services": {
+        "title": "Servicios | Sunday Software Solutions",
+        "description": "Software a medida, SaaS, bots, automatización con IA mediante Microsoft Copilot Studio y soluciones de identidad con Microsoft Entra."
+      },
+      "about": {
+        "title": "Acerca de | Sunday Software Solutions",
+        "description": "Somos una empresa nearshore de software enfocada en desarrollo a medida, automatización con IA y soluciones cloud de Microsoft para PyMEs."
+      },
+      "contact": {
+        "title": "Contacto | Sunday Software Solutions",
+        "description": "Cuéntanos sobre tu proyecto: software a medida, SaaS, bots, automatización con IA o Microsoft Cloud. Te responderemos pronto."
+      }
+    }
   },
   "HomePage": {
     "title": "Bienvenido a Sunday Software Solutions",
@@ -129,6 +143,7 @@
     "networkError": "No pudimos conectar con el servidor. Revisa tu conexión a internet e inténtalo de nuevo.",
     "close": "Cerrar",
     "requiredError": "Este campo es obligatorio.",
+    "requiredLabel": " (obligatorio)",
     "invalidEmailError": "Por favor ingresa un correo electrónico válido.",
     "invalidPhoneError": "Por favor ingresa un número de teléfono válido.",
     "thankYouTitle": "¡Gracias!",

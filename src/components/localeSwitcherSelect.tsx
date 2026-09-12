@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import {useParams} from 'next/navigation';
 import {Locale} from 'next-intl';
-import { useLocale } from 'next-intl';
+import {useLocale} from 'next-intl';
 import {ChangeEvent, ReactNode, useTransition} from 'react';
 import {usePathname, useRouter} from '@/i18n/navigation';
 
@@ -12,11 +12,8 @@ type Props = {
   label: string;
 };
 
-export default function LocaleSwitcherSelect({
-  children,
-  label
-}: Props) {
-  const locale = useLocale(); // Obtiene el idioma actual de la app
+export default function LocaleSwitcherSelect({children, label}: Props) {
+  const locale = useLocale();
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
@@ -40,14 +37,14 @@ export default function LocaleSwitcherSelect({
   return (
     <label
       className={clsx(
-        'relative text-gray-400',
+        'relative text-locale-ink flex items-center min-h-11',
         isPending && 'transition-opacity [&:disabled]:opacity-30'
       )}
     >
-      <p className="sr-only">{label}</p>
+      <span className="sr-only">{label}</span>
       <select
-        className="inline-flex appearance-none bg-transparent py-2 pl-2 pr-5"
-        value={locale} // Cambiamos `defaultValue` por `value`
+        className="appearance-none cursor-pointer bg-transparent py-2.5 pl-2 pr-6 rounded focus-visible:ring-2 focus-visible:ring-card-surface focus-visible:outline-none"
+        value={locale}
         disabled={isPending}
         onChange={onSelectChange}
       >
