@@ -1,105 +1,154 @@
 {
+  "Metadata": {
+    "title": "Sunday Software Solutions",
+    "description": "Custom software development, SaaS, AI-driven automation with Microsoft Copilot Studio, and Microsoft Entra identity solutions."
+  },
   "HomePage": {
     "title": "Welcome to Sunday Software Solutions",
-    "description": "We provide top-notch software development, SaaS solutions, and AI-powered bots.",
+    "description": "We provide top-notch software development, SaaS solutions, AI-driven automation and Microsoft cloud integrations.",
     "services": {
-      "software": "Custom Software Development",
-      "softwareDesc": "We build tailored applications to meet your business needs.",
+      "development": "Custom Software Development",
+      "developmentDesc": "We build tailored applications to meet your business needs.",
+      "support": "Technical Support",
+      "supportDesc": "Help desk, IT support and maintenance that keep your technology running smoothly.",
       "saas": "SaaS Solutions",
       "saasDesc": "Cloud-based solutions to enhance efficiency and scalability.",
       "bots": "Automated Bots",
-      "botsDesc": "AI-driven chatbots for customer support and business automation."
+      "botsDesc": "AI-driven chatbots for customer support and business automation.",
+      "ai": "AI-Driven Automation",
+      "aiDesc": "Intelligent agents and workflows that streamline operations and cut repetitive tasks.",
+      "microsoft": "Microsoft Cloud & Identity",
+      "microsoftDesc": "Secure identity, access management and remote access to your local applications."
     },
     "cta": {
       "text": "Ready to take your business to the next level?",
       "button": "Contact Us"
     }
   },
-    "Nav": {
-        "home": "Home",
-        "objective": "Objective",
-        "services": "Services",
-        "about": "About",
-        "contact": "Contact"
-      },
-      "Footer": {
-        "rigthsReserved" : "All Rigths Reserved"
-      },
-      "Services": {
-        "title": "Our Services",
-        "developmentTitle": "Software Development",
-        "developmentDescription": "We offer custom software solutions tailored to your business needs. Our expertise spans across various platforms, ensuring the right fit for your project.",
-        "customSoftwareDevelopment": "Custom Software Development",
-        "mobileAppDevelopment": "Mobile App Development",
-        "webAppDevelopment": "Web Application Development",
-        "enterpriseSolutions": "Enterprise Solutions",
-        
-        "supportTitle": "Technical Support",
-        "supportDescription": "We provide comprehensive IT support services, from troubleshooting to system maintenance, ensuring your technology runs smoothly.",
-        "itSupport": "IT Support",
-        "helpDeskServices": "Help Desk Services",
-        "maintenanceServices": "Maintenance and System Updates",
-        
-        "saasTitle": "Software as a Service (SaaS)",
-        "saasDescription": "We develop cloud-based software applications to help your business scale. Whether it's a custom solution or an existing platform, we deliver secure and scalable SaaS products.",
-        "customSaaSDevelopment": "Custom SaaS Development",
-        "cloudSolutions": "Cloud Solutions",
-        "scalableApps": "Scalable and Reliable Applications",
-        
-        "botsTitle": "Bots and Automation",
-        "botsDescription": "Our bot development services offer advanced automation solutions, from chatbots for customer support to appointment scheduling bots, enhancing user experience and operational efficiency.",
-        "whatsappBots": "WhatsApp Bots for Customer Interaction",
-        "customerSupportBots": "Customer Support Chatbots",
-        "appointmentSchedulingBots": "Appointment Scheduling Automation",
-        "automatedResponseBots": "Automated Response Bots"
-      },
-      "About": {
-        "title": "About Us",
-        "introDescription": "We are Sunday Software Solutions, a company focused on providing cutting-edge software solutions tailored to meet the needs of small and medium-sized businesses. Our goal is to empower businesses through innovative technologies and exceptional customer support.",
-        
-        "missionTitle": "Our Mission",
-        "missionDescription": "Our mission is to deliver high-quality, reliable, and scalable software solutions that enhance business operations and foster growth.",
-        
-        "visionTitle": "Our Vision",
-        "visionDescription": "We envision becoming a global leader in providing innovative technology solutions to businesses across various industries, helping them succeed in a rapidly evolving digital world.",
-        
-        "teamTitle": "Meet Our Team",
-        "member1JobDescription": "John is the CEO of Sunday Software Solutions. He has over 10 years of experience in leading tech companies and is passionate about innovation and business growth.",
-        "member2JobDescription": "Jane is the CTO, overseeing the technical direction and ensuring that all our products meet the highest standards of quality and performance.",
-        "member3JobDescription": "Alex is our Lead Developer, working closely with the team to build robust and scalable solutions for our clients.",
-        
-        "locationTitle": "Our Location",
-        "locationDescription": "We are located in the heart of the city, easily accessible and close to major transportation hubs.",
-        
-        "extraInfoTitle": "Why Choose Us",
-        "extraInfoDescription": "We are committed to excellence, customer satisfaction, and continuous improvement. With a highly skilled team, we ensure the best results for all of our clients."
-      },
-      "Contact": {
-        "title": "Contact Us",
-        "introDescription": "We would love to hear from you! Please fill out the form below, and our team will get in touch with you as soon as possible.",
-        "formTitle": "Contact Form",
-        "name": "Name",
-        "company": "Company",
-        "requirementType": "Requirement Type",
-        "selectrequirementType": "Select a Requirement",
-        "development": "Development",
-        "support": "Support",
-        "saas": "SaaS",
-        "bot": "Bot",
-        "other": "Other",
-        "contactType": "Contact Type",
-        "selectcontactType": "Select Contact Type",
-        "Phone": "Phone",
-        "Email": "Email",
-        "projectDescription": "Project Description",
-        "businessSector": "Business Sector",
-        "orContactUs": "Or Contact Us Directly:",
-        "submit": "Submit",
-        "thankYouTitle": "Thank You!",
-        "thankYouMessage": "Thank you for reaching out! We will get back to you as soon as possible. Redirecting to the homepage..."
-      },
-      "LocaleSwitcher": {
-        "label": "Change language",
-        "locale": "{locale, select, es {ES} en {EN} other {Unknown}}"
-      }
+  "Nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "mobileMenu": "Open menu",
+    "skipToContent": "Skip to content"
+  },
+  "Footer": {
+    "rightsReserved": "All Rights Reserved"
+  },
+  "Services": {
+    "title": "Our Services",
+    "developmentTitle": "Software Development",
+    "developmentDescription": "We offer custom software solutions tailored to your business needs. Our expertise spans across various platforms, ensuring the right fit for your project.",
+    "customSoftwareDevelopment": "Custom Software Development",
+    "mobileAppDevelopment": "Mobile App Development",
+    "webAppDevelopment": "Web Application Development",
+    "enterpriseSolutions": "Enterprise Solutions",
+
+    "supportTitle": "Technical Support",
+    "supportDescription": "We provide comprehensive IT support services, from troubleshooting to system maintenance, ensuring your technology runs smoothly.",
+    "itSupport": "IT Support",
+    "helpDeskServices": "Help Desk Services",
+    "maintenanceServices": "Maintenance and System Updates",
+
+    "saasTitle": "Software as a Service (SaaS)",
+    "saasDescription": "We develop cloud-based software applications to help your business scale. Whether it's a custom solution or an existing platform, we deliver secure and scalable SaaS products.",
+    "customSaaSDevelopment": "Custom SaaS Development",
+    "cloudSolutions": "Cloud Solutions",
+    "scalableApps": "Scalable and Reliable Applications",
+
+    "botsTitle": "Bots and Automation",
+    "botsDescription": "Our bot development services offer advanced automation solutions, from chatbots for customer support to appointment scheduling bots, enhancing user experience and operational efficiency.",
+    "whatsappBots": "WhatsApp Bots for Customer Interaction",
+    "customerSupportBots": "Customer Support Chatbots",
+    "appointmentSchedulingBots": "Appointment Scheduling Automation",
+    "automatedResponseBots": "Automated Response Bots",
+
+    "aiTitle": "AI-Driven Automation",
+    "aiDescription": "We design intelligent agents and automated workflows powered by AI to reduce manual work, accelerate processes and improve decision making across your organization.",
+    "aiWorkflowAutomation": "AI Workflow Automation",
+    "customAiAgents": "Custom AI Agents",
+    "copilotStudioAgents": "Microsoft Copilot Studio Copilots",
+    "aiDocumentProcessing": "AI-Powered Document Processing",
+
+    "microsoftTitle": "Microsoft Cloud & Identity Solutions",
+    "microsoftDescription": "We integrate Microsoft technologies to secure identities and connect your local applications with the cloud, enabling secure remote work and unified access.",
+    "entraId": "Microsoft Entra ID (Identity & Access Management)",
+    "entraAppProxy": "Entra Application Proxy (Secure Remote Access to Local Apps)",
+    "ssoMfaIntegration": "SSO & MFA Integration",
+    "powerPlatformAutomation": "Power Platform & Process Automation"
+  },
+  "About": {
+    "title": "About Us",
+    "introDescription": "We are Sunday Software Solutions, a company focused on providing cutting-edge software solutions tailored to meet the needs of small and medium-sized businesses. Our goal is to empower businesses through innovative technologies and exceptional customer support.",
+
+    "missionTitle": "Our Mission",
+    "missionDescription": "Our mission is to deliver high-quality, reliable, and scalable software solutions that enhance business operations and foster growth.",
+
+    "visionTitle": "Our Vision",
+    "visionDescription": "We envision becoming a global leader in providing innovative technology solutions to businesses across various industries, helping them succeed in a rapidly evolving digital world.",
+
+"capabilitiesTitle": "What We Offer",
+    "capability1Title": "End-to-End Software Delivery",
+    "capability1Description": "From requirements to launch and beyond: development, testing, and ongoing maintenance with a single point of contact.",
+    "capability2Title": "AI & Microsoft Ecosystem",
+    "capability2Description": "AI agents, copilots, and identity solutions built on Microsoft Copilot Studio and Microsoft Entra.",
+    "capability3Title": "Bilingual Nearshore Support",
+    "capability3Description": "English and Spanish support that combines Mexican nearshore economics with US-standard quality.",
+
+    "locationTitle": "Our Location",
+    "locationDescription": "We are located in the heart of the city, easily accessible and close to major transportation hubs.",
+
+    "extraInfoTitle": "Why Choose Us",
+    "extraInfoDescription": "We are committed to excellence, customer satisfaction, and continuous improvement. With a highly skilled team, we ensure the best results for all of our clients."
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "introDescription": "We would love to hear from you! Please fill out the form below, and our team will get in touch with you as soon as possible.",
+    "name": "Name",
+    "company": "Company",
+    "requirementType": "Requirement Type",
+    "selectrequirementType": "Select a Requirement",
+    "development": "Development",
+    "support": "Support",
+    "saas": "SaaS",
+    "bot": "Bot",
+    "ai": "AI / Automation",
+    "microsoft": "Microsoft / Entra",
+    "other": "Other",
+    "contactType": "Contact Type",
+    "selectcontactType": "Select Contact Type",
+    "Phone": "Phone",
+    "Email": "Email",
+    "projectDescription": "Project Description",
+    "businessSector": "Business Sector",
+    "orContactUs": "Or Contact Us Directly:",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "sendError": "There was an error sending your request. Please try again.",
+    "networkError": "We couldn't reach the server. Please check your internet connection and try again.",
+    "close": "Close",
+    "requiredError": "This field is required.",
+    "invalidEmailError": "Please enter a valid email address.",
+    "invalidPhoneError": "Please enter a valid phone number.",
+    "thankYouTitle": "Thank You!",
+    "thankYouMessage": "Thank you for reaching out! We will get back to you as soon as possible. You can close this window to return to the homepage."
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, es {ES} en {EN} other {Unknown}}"
+  },
+  "ErrorPage": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again.",
+    "retry": "Try again"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist.",
+    "home": "Back to home"
+  },
+  "Loading": {
+    "text": "Loading..."
   }
+}

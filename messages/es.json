@@ -1,105 +1,154 @@
 {
-    "HomePage": {
+  "Metadata": {
+    "title": "Sunday Software Solutions",
+    "description": "Desarrollo de software personalizado, SaaS, automatización impulsada por IA con Microsoft Copilot Studio y soluciones de identidad con Microsoft Entra."
+  },
+  "HomePage": {
     "title": "Bienvenido a Sunday Software Solutions",
-    "description": "Brindamos desarrollo de software de alta calidad, soluciones SaaS y bots con inteligencia artificial.",
+    "description": "Brindamos desarrollo de software de alta calidad, soluciones SaaS, automatización impulsada por IA e integraciones con la nube de Microsoft.",
     "services": {
-      "software": "Desarrollo de Software Personalizado",
-      "softwareDesc": "Creamos aplicaciones a medida para satisfacer las necesidades de tu negocio.",
+      "development": "Desarrollo de Software Personalizado",
+      "developmentDesc": "Creamos aplicaciones a medida para satisfacer las necesidades de tu negocio.",
+      "support": "Soporte Técnico",
+      "supportDesc": "Mesa de ayuda, soporte IT y mantenimiento para que tu tecnología funcione sin problemas.",
       "saas": "Soluciones SaaS",
       "saasDesc": "Soluciones en la nube para mejorar la eficiencia y escalabilidad.",
       "bots": "Bots Automatizados",
-      "botsDesc": "Chatbots impulsados por IA para soporte al cliente y automatización empresarial."
+      "botsDesc": "Chatbots impulsados por IA para soporte al cliente y automatización empresarial.",
+      "ai": "Automatización con IA",
+      "aiDesc": "Agentes inteligentes y flujos de trabajo que optimizan tus operaciones y eliminan tareas repetitivas.",
+      "microsoft": "Microsoft Cloud e Identidad",
+      "microsoftDesc": "Identidad segura, gestión de accesos y acceso remoto a tus aplicaciones locales."
     },
     "cta": {
       "text": "¿Listo para llevar tu negocio al siguiente nivel?",
       "button": "Contáctanos"
     }
   },
-    "Nav": {
-        "home": "Home",
-        "objective": "Objetivo",
-        "services": "Servicios",
-        "about": "Acerca de",
-        "contact": "Contacto"
-      },
-      "Footer": {
-        "rigthsReserved" : "Todos los derechos reservados"
-    },
-    "Services": {
-      "title": "Nuestros Servicios",
-      "developmentTitle": "Desarrollo de Software",
-      "developmentDescription": "Ofrecemos soluciones de software personalizadas adaptadas a las necesidades de su negocio. Nuestra experiencia abarca diversas plataformas, asegurando la mejor opción para su proyecto.",
-      "customSoftwareDevelopment": "Desarrollo de Software Personalizado",
-      "mobileAppDevelopment": "Desarrollo de Aplicaciones Móviles",
-      "webAppDevelopment": "Desarrollo de Aplicaciones Web",
-      "enterpriseSolutions": "Soluciones Empresariales",
-      
-      "supportTitle": "Soporte Técnico",
-      "supportDescription": "Ofrecemos servicios completos de soporte IT, desde la solución de problemas hasta el mantenimiento del sistema, asegurando que su tecnología funcione sin problemas.",
-      "itSupport": "Soporte IT",
-      "helpDeskServices": "Servicios de Mesa de Ayuda",
-      "maintenanceServices": "Mantenimiento y Actualización de Sistemas",
-      
-      "saasTitle": "Software como Servicio (SaaS)",
-      "saasDescription": "Desarrollamos aplicaciones de software basadas en la nube para ayudar a su empresa a escalar. Ya sea una solución personalizada o una plataforma existente, entregamos productos SaaS seguros y escalables.",
-      "customSaaSDevelopment": "Desarrollo de SaaS Personalizado",
-      "cloudSolutions": "Soluciones en la Nube",
-      "scalableApps": "Aplicaciones Escalables y Fiables",
-      
-      "botsTitle": "Bots y Automatización",
-      "botsDescription": "Nuestros servicios de desarrollo de bots ofrecen soluciones avanzadas de automatización, desde chatbots para soporte al cliente hasta bots para agendar citas, mejorando la experiencia del usuario y la eficiencia operativa.",
-      "whatsappBots": "Bots de WhatsApp para Interacción con Clientes",
-      "customerSupportBots": "Chatbots de Soporte al Cliente",
-      "appointmentSchedulingBots": "Automatización de Agendamiento de Citas",
-      "automatedResponseBots": "Bots de Respuestas Automatizadas"
-    },
-    "About": {
-      "title": "Acerca de Nosotros",
-      "introDescription": "Somos Sunday Software Solutions, una empresa enfocada en brindar soluciones de software innovadoras y personalizadas para pequeñas y medianas empresas. Nuestro objetivo es empoderar a los negocios mediante tecnologías de vanguardia y un soporte al cliente excepcional.",
-      
-      "missionTitle": "Nuestra Misión",
-      "missionDescription": "Nuestra misión es entregar soluciones de software de alta calidad, confiables y escalables, que mejoren las operaciones comerciales y fomenten el crecimiento de nuestros clientes.",
-      
-      "visionTitle": "Nuestra Visión",
-      "visionDescription": "Visualizamos convertirnos en líderes globales en la provisión de soluciones tecnológicas innovadoras para empresas de diversas industrias, ayudándolas a tener éxito en un mundo digital en constante evolución.",
-      
-      "teamTitle": "Conoce a Nuestro Equipo",
-      "member1JobDescription": "John es el CEO de Sunday Software Solutions. Cuenta con más de 10 años de experiencia liderando empresas tecnológicas y es un apasionado de la innovación y el crecimiento empresarial.",
-      "member2JobDescription": "Jane es la CTO, supervisando la dirección técnica y asegurándose de que todos nuestros productos cumplan con los más altos estándares de calidad y rendimiento.",
-      "member3JobDescription": "Alex es nuestro Lead Developer, trabajando estrechamente con el equipo para construir soluciones robustas y escalables para nuestros clientes.",
-      
-      "locationTitle": "Nuestra Ubicación",
-      "locationDescription": "Estamos ubicados en el corazón de la ciudad, de fácil acceso y cerca de los principales centros de transporte.",
-      
-      "extraInfoTitle": "¿Por Qué Elegirnos?",
-      "extraInfoDescription": "Estamos comprometidos con la excelencia, la satisfacción del cliente y la mejora continua. Con un equipo altamente capacitado, garantizamos los mejores resultados para todos nuestros clientes."
-    },
-    "Contact": {
-      "title": "Contáctanos",
-      "introDescription": "¡Nos encantaría saber de ti! Por favor, completa el formulario a continuación y nuestro equipo se pondrá en contacto contigo lo antes posible.",
-      "formTitle": "Formulario de Contacto",
-      "name": "Nombre",
-      "company": "Compañía",
-      "requirementType": "Tipo de Requerimiento",
-      "selectrequirementType": "Selecciona un Requerimiento",
-      "development": "Desarrollo",
-      "support": "Soporte",
-      "saas": "SaaS",
-      "bot": "Bot",
-      "other": "Otro",
-      "contactType": "Tipo de Contacto",
-      "selectcontactType": "Selecciona Tipo de Contacto",
-      "Phone": "Teléfono",
-      "Email": "Correo Electrónico",
-      "projectDescription": "Descripción del Proyecto",
-      "businessSector": "Sector Comercial",
-      "orContactUs": "O contáctanos directamente:",
-      "submit": "Enviar",
-      "thankYouTitle": "¡Gracias!",
-      "thankYouMessage": "¡Gracias por ponerte en contacto con nosotros! Nos comunicaremos contigo lo antes posible. Redirigiendo a la página principal..."
-    },
-    "LocaleSwitcher": {
-      "label": "Cambiar idioma",
-      "locale": "{locale, select, es {ES} en {EN} other {Unknown}}"
-    }
+  "Nav": {
+    "home": "Home",
+    "services": "Servicios",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "mobileMenu": "Abrir menú",
+    "skipToContent": "Saltar al contenido"
+  },
+  "Footer": {
+    "rightsReserved": "Todos los derechos reservados"
+  },
+  "Services": {
+    "title": "Nuestros Servicios",
+    "developmentTitle": "Desarrollo de Software",
+    "developmentDescription": "Ofrecemos soluciones de software personalizadas adaptadas a las necesidades de su negocio. Nuestra experiencia abarca diversas plataformas, asegurando la mejor opción para su proyecto.",
+    "customSoftwareDevelopment": "Desarrollo de Software Personalizado",
+    "mobileAppDevelopment": "Desarrollo de Aplicaciones Móviles",
+    "webAppDevelopment": "Desarrollo de Aplicaciones Web",
+    "enterpriseSolutions": "Soluciones Empresariales",
+
+    "supportTitle": "Soporte Técnico",
+    "supportDescription": "Ofrecemos servicios completos de soporte IT, desde la solución de problemas hasta el mantenimiento del sistema, asegurando que su tecnología funcione sin problemas.",
+    "itSupport": "Soporte IT",
+    "helpDeskServices": "Servicios de Mesa de Ayuda",
+    "maintenanceServices": "Mantenimiento y Actualización de Sistemas",
+
+    "saasTitle": "Software como Servicio (SaaS)",
+    "saasDescription": "Desarrollamos aplicaciones de software basadas en la nube para ayudar a su empresa a escalar. Ya sea una solución personalizada o una plataforma existente, entregamos productos SaaS seguros y escalables.",
+    "customSaaSDevelopment": "Desarrollo de SaaS Personalizado",
+    "cloudSolutions": "Soluciones en la Nube",
+    "scalableApps": "Aplicaciones Escalables y Fiables",
+
+    "botsTitle": "Bots y Automatización",
+    "botsDescription": "Nuestros servicios de desarrollo de bots ofrecen soluciones avanzadas de automatización, desde chatbots para soporte al cliente hasta bots para agendar citas, mejorando la experiencia del usuario y la eficiencia operativa.",
+    "whatsappBots": "Bots de WhatsApp para Interacción con Clientes",
+    "customerSupportBots": "Chatbots de Soporte al Cliente",
+    "appointmentSchedulingBots": "Automatización de Agendamiento de Citas",
+    "automatedResponseBots": "Bots de Respuestas Automatizadas",
+
+    "aiTitle": "Automatización con IA",
+    "aiDescription": "Diseñamos agentes inteligentes y flujos de trabajo automatizados impulsados por IA para reducir el trabajo manual, acelerar procesos y mejorar la toma de decisiones en tu organización.",
+    "aiWorkflowAutomation": "Automatización de Flujos de Trabajo con IA",
+    "customAiAgents": "Agentes de IA Personalizados",
+    "copilotStudioAgents": "Copilotos de Microsoft Copilot Studio",
+    "aiDocumentProcessing": "Procesamiento de Documentos con IA",
+
+    "microsoftTitle": "Soluciones Microsoft Cloud e Identidad",
+    "microsoftDescription": "Integramos tecnologías de Microsoft para asegurar identidades y conectar tus aplicaciones locales con la nube, habilitando trabajo remoto seguro y acceso unificado.",
+    "entraId": "Microsoft Entra ID (Gestión de Identidad y Accesos)",
+    "entraAppProxy": "Entra Application Proxy (Acceso Remoto Seguro a Apps Locales)",
+    "ssoMfaIntegration": "Integración de SSO y MFA",
+    "powerPlatformAutomation": "Power Platform y Automatización de Procesos"
+  },
+  "About": {
+    "title": "Acerca de Nosotros",
+    "introDescription": "Somos Sunday Software Solutions, una empresa enfocada en brindar soluciones de software innovadoras y personalizadas para pequeñas y medianas empresas. Nuestro objetivo es empoderar a los negocios mediante tecnologías de vanguardia y un soporte al cliente excepcional.",
+
+    "missionTitle": "Nuestra Misión",
+    "missionDescription": "Nuestra misión es entregar soluciones de software de alta calidad, confiables y escalables, que mejoren las operaciones comerciales y fomenten el crecimiento de nuestros clientes.",
+
+    "visionTitle": "Nuestra Visión",
+    "visionDescription": "Visualizamos convertirnos en líderes globales en la provisión de soluciones tecnológicas innovadoras para empresas de diversas industrias, ayudándolas a tener éxito en un mundo digital en constante evolución.",
+
+    "capabilitiesTitle": "Lo Que Ofrecemos",
+    "capability1Title": "Entrega de Software de Punta a Punta",
+    "capability1Description": "Del requerimiento al lanzamiento y más allá: desarrollo, pruebas y mantenimiento continuo con un único punto de contacto.",
+    "capability2Title": "Ecosistema de IA y Microsoft",
+    "capability2Description": "Agentes de IA, copilotos y soluciones de identidad construidos sobre Microsoft Copilot Studio y Microsoft Entra.",
+    "capability3Title": "Soporte Nearshore Bilingüe",
+    "capability3Description": "Soporte en inglés y español que combina la economía nearshore mexicana con calidad de estándar estadounidense.",
+
+    "locationTitle": "Nuestra Ubicación",
+    "locationDescription": "Estamos ubicados en el corazón de la ciudad, de fácil acceso y cerca de los principales centros de transporte.",
+
+    "extraInfoTitle": "¿Por Qué Elegirnos?",
+    "extraInfoDescription": "Estamos comprometidos con la excelencia, la satisfacción del cliente y la mejora continua. Con un equipo altamente capacitado, garantizamos los mejores resultados para todos nuestros clientes."
+  },
+  "Contact": {
+    "title": "Contáctanos",
+    "introDescription": "¡Nos encantaría saber de ti! Por favor, completa el formulario a continuación y nuestro equipo se pondrá en contacto contigo lo antes posible.",
+    "name": "Nombre",
+    "company": "Compañía",
+    "requirementType": "Tipo de Requerimiento",
+    "selectrequirementType": "Selecciona un Requerimiento",
+    "development": "Desarrollo",
+    "support": "Soporte",
+    "saas": "SaaS",
+    "bot": "Bot",
+    "ai": "IA / Automatización",
+    "microsoft": "Microsoft / Entra",
+    "other": "Otro",
+    "contactType": "Tipo de Contacto",
+    "selectcontactType": "Selecciona Tipo de Contacto",
+    "Phone": "Teléfono",
+    "Email": "Correo Electrónico",
+    "projectDescription": "Descripción del Proyecto",
+    "businessSector": "Sector Comercial",
+    "orContactUs": "O contáctanos directamente:",
+    "submit": "Enviar",
+    "sending": "Enviando...",
+    "sendError": "Hubo un error al enviar tu solicitud. Por favor, inténtalo de nuevo.",
+    "networkError": "No pudimos conectar con el servidor. Revisa tu conexión a internet e inténtalo de nuevo.",
+    "close": "Cerrar",
+    "requiredError": "Este campo es obligatorio.",
+    "invalidEmailError": "Por favor ingresa un correo electrónico válido.",
+    "invalidPhoneError": "Por favor ingresa un número de teléfono válido.",
+    "thankYouTitle": "¡Gracias!",
+    "thankYouMessage": "¡Gracias por ponerte en contacto con nosotros! Nos comunicaremos contigo lo antes posible. Puedes cerrar esta ventana para volver a la página principal."
+  },
+  "LocaleSwitcher": {
+    "label": "Cambiar idioma",
+    "locale": "{locale, select, es {ES} en {EN} other {Unknown}}"
+  },
+  "ErrorPage": {
+    "title": "Algo salió mal",
+    "description": "Ocurrió un error inesperado. Por favor, inténtalo de nuevo.",
+    "retry": "Reintentar"
+  },
+  "NotFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe.",
+    "home": "Volver al inicio"
+  },
+  "Loading": {
+    "text": "Cargando..."
   }
+}

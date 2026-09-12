@@ -9,13 +9,11 @@ import {usePathname, useRouter} from '@/i18n/navigation';
 
 type Props = {
   children: ReactNode;
-  defaultValue: string;
   label: string;
 };
 
 export default function LocaleSwitcherSelect({
   children,
-  defaultValue,
   label
 }: Props) {
   const locale = useLocale(); // Obtiene el idioma actual de la app
@@ -27,8 +25,6 @@ export default function LocaleSwitcherSelect({
   function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const nextLocale = event.target.value as Locale;
 
-    console.log('Cambiando idioma a:', nextLocale);
-
     startTransition(() => {
       document.cookie = `NEXT_LOCALE=${nextLocale}; path=/; max-age=31536000`;
       router.replace(
@@ -39,8 +35,6 @@ export default function LocaleSwitcherSelect({
         {locale: nextLocale}
       );
     });
-  
-  
   }
 
   return (
@@ -59,7 +53,6 @@ export default function LocaleSwitcherSelect({
       >
         {children}
       </select>
-      {/* <span className="pointer-events-none absolute right-2 top-[8px]">⌄</span> */}
     </label>
   );
 }

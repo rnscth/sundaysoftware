@@ -1,48 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-/* body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-} */
-
-/* globals.css - Tema neutro */
-:root {
   --background: #9a9fa3; /* Gris muy claro */
   --text-color: #333; /* Gris oscuro */
-  --primary-color: #2f3337; /* Azul suave */
-  --secondary-color: #babbbc; /* Gris azulado */
+  --primary-color: #2f3337; /* Charcoal slate */
+  --cta-color: #1f2937; /* Deep slate */
+  --cta-hover: #374151; /* Mid slate */
 }
 
 body {
   background-color: var(--background);
   color: var(--text-color);
-  font-family: Arial, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  caret-color: var(--cta-color);
 }
 
 header {
   background: var(--primary-color);
   color: white;
-  padding: 1rem;
 }
 
 nav a {
@@ -52,41 +27,44 @@ nav a {
   border-radius: 5px;
 }
 
-nav a:hover {
-  background: var(--secondary-color);
+nav a:hover,
+nav a:focus-visible {
+  background: var(--cta-hover);
+}
+
+nav a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 footer {
   background: var(--primary-color);
   color: white;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
 }
 
-.button {
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.button:hover {
-  background: var(--secondary-color);
-}
-
-@keyframes fadeIn {
+@keyframes page-enter {
   from {
     opacity: 0;
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
+.page-enter {
+  animation: page-enter 0.4s ease-in-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .page-enter {
+    animation: none;
+  }
+}
+
+::selection {
+  background: var(--cta-color);
+  color: #fff;
+}

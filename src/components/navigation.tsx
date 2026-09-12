@@ -1,89 +1,87 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
-import { useLocale } from 'next-intl';
-import { useState, useEffect } from 'react';
-import LocaleSwitcher from './locateSwitcher';
+import { Link } from '@/i18n/navigation';
+import { useRef, useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import LocaleSwitcher from './localeSwitcher';
 
 export default function Nav() {
-  const locale = useLocale(); 
   const t = useTranslations('Nav');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
-  const [currentLocale, setCurrentLocale] = useState<string | null>(null);
+  const hamburgerRef = useRef<HTMLButtonElement | null>(null);
 
-  useEffect(() => {
-    const localeCookie = document.cookie
-      .split('; ')
-      .find(row => row.startsWith('NEXT_LOCALE='))
-      ?.split('=')[1];
-    setCurrentLocale(localeCookie || 'en');
-  }, []);
+  const links = [
+    { href: '/', label: t('home') },
+    { href: '/Services', label: t('services') },
+    { href: '/About', label: t('about') },
+    { href: '/Contact', label: t('contact') },
+  ];
 
-  // Toggle mobile menu visibility
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen((prevState) => !prevState);
+  const closeMenu = () => {
+    setIsMobileMenuOpen(false);
+    hamburgerRef.current?.focus();
   };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 px-4 py-2">
-      {/* Logo and Company Name */}
-      <h2 className="text-center sm:text-left">
-        <p className="text-xl sm:text-2xl font-semibold p-1">Sunday Software Solutions</p>
-      </h2>
+    <div
+      className="relative grid grid-cols-1 lg:grid-cols-2 gap-4"
+      onKeyDown={(e) => {
+        if (e.key === 'Escape' && isMobileMenuOpen) closeMenu();
+      }}
+    >
+      <Link
+        href="/"
+        className="text-center lg:text-left text-xl lg:text-2xl font-semibold p-1 rounded focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
+      >
+        Sunday Software Solutions
+      </Link>
 
-      {/* Navigation Links */}
-      <nav className="flex justify-between items-center sm:justify-center space-x-4 sm:space-x-8">
-        <div className="hidden sm:flex space-x-4">
-          {currentLocale && (
-            <>
-              <Link href={`/${currentLocale}/`} className="text-sm sm:text-lg">
-                {t('home')}
-              </Link>
-              <Link href={`/${currentLocale}/Services`} className="text-sm sm:text-lg">
-                {t('services')}
-              </Link>
-              <Link href={`/${currentLocale}/About`} className="text-sm sm:text-lg">
-                {t('about')}
-              </Link>
-              <Link href={`/${currentLocale}/Contact`} className="text-sm sm:text-lg">
-                {t('contact')}
-              </Link>
-            </>
-          )}
+      <nav className="flex justify-between items-center lg:justify-center space-x-4 lg:space-x-8">
+        <div className="hidden lg:flex space-x-4">
+          {links.map((link) => (
+            <Link key={link.href} href={link.href} className="text-lg font-medium">
+              {link.label}
+            </Link>
+          ))}
         </div>
 
-          <LocaleSwitcher/>
+        <LocaleSwitcher />
 
-        {/* Mobile Menu Icon */}
-        <div className="sm:hidden flex items-center">
-          <button onClick={toggleMobileMenu} className="p-2">
-            <span className="text-xl">☰</span> {/* Hamburger Icon */}
+        <div className="lg:hidden flex items-center">
+          <button
+            ref={hamburgerRef}
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+            aria-label={t('mobileMenu')}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
+            className="flex items-center justify-center min-h-11 min-w-11 p-2 rounded focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
+          >
+            {isMobileMenuOpen ? (
+              <FaTimes className="text-xl" aria-hidden="true" />
+            ) : (
+              <FaBars className="text-xl" aria-hidden="true" />
+            )}
           </button>
         </div>
       </nav>
 
-      {/* Mobile Menu - Conditional Rendering */}
       {isMobileMenuOpen && (
-        <div className="sm:hidden absolute left-1/2 top-16 transform -translate-x-1/2 w-60 bg-white shadow-md rounded">
+        <div
+          id="mobile-menu"
+          className="lg:hidden absolute left-1/2 top-full -translate-x-1/2 mt-2 w-60 bg-white shadow-md rounded z-50"
+        >
           <div className="flex flex-col items-center space-y-4 py-4">
-            {currentLocale && (
-              <>
-                <Link href={`/${currentLocale}/`} className="text-sm sm:text-lg text-black" onClick={toggleMobileMenu}>
-                  {t('home')}
-                </Link>
-                <Link href={`/${currentLocale}/Services`} className="text-sm sm:text-lg text-black" onClick={toggleMobileMenu}>
-                  {t('services')}
-                </Link>
-                <Link href={`/${currentLocale}/About`} className="text-sm sm:text-lg text-black" onClick={toggleMobileMenu}>
-                  {t('about')}
-                </Link>
-                <Link href={`/${currentLocale}/Contact`} className="text-sm sm:text-lg text-black" onClick={toggleMobileMenu}>
-                  {t('contact')}
-                </Link>
-              </>
-            )}
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-black w-full text-center py-3 min-h-11 flex items-center justify-center"
+                onClick={closeMenu}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       )}
