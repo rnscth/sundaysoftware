@@ -1,63 +1,50 @@
 @import "tailwindcss";
 
 @theme {
-  --color-charcoal-slate: #2f3337;
-  --color-deep-slate: #1f2937;
-  --color-mid-slate: #374151;
-  --color-cloud-guard: #babbbc;
-  --color-card-surface: #ffffff;
-  --color-wet-ink: #333333;
-  --color-muted-ink: #4b5563;
-  --color-faint-ink: #6b7280;
-  --color-locale-ink: #9ca3af;
-  --color-fog: #f3f4f6;
-  --color-ash: #d1d5db;
-  --color-mist-grey: #9a9fa3;
-  --color-code-blue: #2563eb;
-  --color-support-green: #16a34a;
-  --color-cloud-purple: #9333ea;
-  --color-bot-gold: #a16207;
-  --color-ai-red: #dc2626;
-  --color-error: #dc2626;
-  --color-microsoft-blue: #3b82f6;
-  --color-overlay: rgba(0, 0, 0, 0.6);
+  --color-midnight: #101c2c;
+  --color-midnight-soft: #16263c;
+  --color-midnight-raised: #1d3048;
+  --color-sunburst: #ffb547;
+  --color-sunburst-hover: #ffc76b;
+  --color-amber-deep: #92400e;
+  --color-amber-soft: rgba(255, 181, 71, 0.14);
+  --color-ivory: #f5f0e6;
+  --color-ivory-muted: #a8b3c2;
+  --color-shell: #faf6ee;
+  --color-ash-warm: #eae3d4;
+  --color-ink: #23303f;
+  --color-ink-muted: #58697b;
+  --color-ink-faint: #75869a;
+  --color-line: rgba(16, 28, 44, 0.1);
+  --color-line-dark: rgba(245, 240, 230, 0.16);
+  --color-error: #b42318;
+  --color-overlay: rgba(9, 16, 28, 0.66);
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: var(--color-fog);
-  color: var(--color-muted-ink);
+  background-color: var(--color-shell);
+  color: var(--color-ink-muted);
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  caret-color: var(--color-deep-slate);
+  caret-color: var(--color-midnight);
+}
+
+.font-display {
+  font-family: var(--font-fraunces), Georgia, "Times New Roman", serif;
 }
 
 header {
-  background: var(--color-charcoal-slate);
-  color: var(--color-card-surface);
-}
-
-nav a {
-  color: var(--color-card-surface);
-  text-decoration: none;
-  padding: 0.625rem 0.5rem;
-  border-radius: 5px;
-  transition: background-color 300ms var(--ease-smooth);
-}
-
-nav a:hover,
-nav a:focus-visible {
-  background: var(--color-mid-slate);
-}
-
-nav a:focus-visible {
-  outline: 2px solid var(--color-card-surface);
-  outline-offset: 2px;
+  background: var(--color-midnight);
+  color: var(--color-ivory);
 }
 
 footer {
-  background: var(--color-charcoal-slate);
-  color: var(--color-card-surface);
-  text-align: center;
+  background: var(--color-midnight);
+  color: var(--color-ivory-muted);
 }
 
 @keyframes page-enter {
@@ -89,7 +76,12 @@ footer {
   }
 }
 
+::placeholder {
+  color: var(--color-ink-muted);
+  opacity: 1;
+}
+
 ::selection {
-  background: var(--color-deep-slate);
-  color: var(--color-card-surface);
+  background: var(--color-sunburst);
+  color: var(--color-midnight);
 }

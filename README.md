@@ -1,6 +1,6 @@
 # Sunday Software Solutions
 
-Sitio web corporativo de **Sunday Software Solutions**: empresa de desarrollo de software, soluciones SaaS, bots y soporte técnico. El sitio incluye páginas de inicio, servicios, acerca de y contacto, con soporte multidioma (inglés y español).
+Sitio web de **Sunday Software Solutions**: práctica de software e IA que conecta los datos, procesos y aplicaciones de empresas medianas. Landing de una página multidioma (inglés y español) con tres líneas de servicio — agentes de inteligencia de negocio, automatización con IA y soporte/modernización de aplicaciones — método, modelo de relación y formulario de contacto.
 
 ## Stack tecnológico
 
@@ -9,8 +9,9 @@ Sitio web corporativo de **Sunday Software Solutions**: empresa de desarrollo de
 | Next.js (App Router) | 15.2.8 | Framework y enrutado |
 | React | 19 | UI |
 | TypeScript | 5 | Tipado estático |
-| Tailwind CSS | 4 | Estilos (configuración vía CSS, no `tailwind.config`) |
+| Tailwind CSS | 4 | Estilos (configuración vía CSS en `src/app/globals.css`) |
 | next-intl | 4 | Internacionalización (EN/ES) |
+| Fraunces / Inter | — | Display serif / cuerpo (vía `next/font/google`) |
 | Nodemailer | 7 | Envío de correos desde la API |
 
 ## Requisitos previos
@@ -56,26 +57,27 @@ src/
 │   ├── navigation.ts          # Link, useRouter, usePathname con locale
 │   └── request.ts             # Carga de mensajes por locale
 ├── app/
-│   ├── globals.css            # Estilos globales + tema Tailwind v4
+│   ├── globals.css            # Estilos globales + tema Tailwind v4 (tokens)
+│   ├── icon.svg               # Icono "Sunrise S" (favicon)
+│   ├── apple-icon.png         # Icono iOS (180×180)
 │   ├── sitemap.ts             # Sitemap XML (urls en/en y es/es)
 │   ├── robots.ts              # robots.txt
 │   ├── api/send_email/route.ts# Route Handler del formulario de contacto (Nodemailer)
-│   └── [locale]/              # Páginas localizadas
-│       ├── layout.tsx         # Layout raíz (Nav, Footer, metadata)
-│       ├── page.tsx           # Inicio (hero + servicios + CTA)
-│       ├── Services/page.tsx  # Servicios (incluye IA + Microsoft Entra)
-│       ├── About/page.tsx     # Sobre nosotros (equipo, ubicación)
-│       ├── Contact/page.tsx   # Formulario de contacto (client component)
+│   └── [locale]/              # Landing única localizada
+│       ├── layout.tsx         # Layout raíz (Nav, Footer, fuentes, metadata)
+│       ├── page.tsx           # Landing: hero, problemas, servicios, escenarios, método, relación, empresa, contacto
 │       ├── not-found.tsx      # 404 localizado
 │       ├── error.tsx          # Error boundary localizado
 │       ├── loading.tsx        # Estado de carga localizado
 │       └── template.tsx       # Animación de entrada por navegación (CSS, respeta prefers-reduced-motion)
 └── components/
-    ├── navigation.tsx         # Barra de navegación responsive (next-intl Link)
-    ├── footer.tsx             # Pie de página (año dinámico)
+    ├── navigation.tsx         # Barra de navegación con anclas + CTA (next-intl Link)
+    ├── brandMark.tsx          # Render del icono Sunrise S (mismos vectores que icon.svg)
+    ├── contactForm.tsx        # Formulario de contacto (client component, sin redirect)
+    ├── footer.tsx             # Pie de página
     ├── localeSwitcher.tsx     # Selector de idioma
-    ├── localeSwitcher.tsx       # Selector de idioma (componente)
-    └── localeSwitcherSelect.ts# Select HTML "use client"
+    ├── localeSwitcherSelect.tsx# Select HTML "use client"
+    └── focusOnRouteChange.tsx # Enfoca el contenido al cambiar de locale
 messages/
 ├── en.json                   # Traducciones inglés
 └── es.json                   # Traducciones español
@@ -85,7 +87,7 @@ messages/
 
 - Locales soportados: `en` (default) y `es`.
 - Los mensajes se definen en `messages/en.json` y `messages/es.json` con la **misma estructura**.
-- Las rutas internas deben generarse con `Link`, `useRouter` de `@/i18n/navigation` para preservar el locale actual — no se deben hardcodear prefijos `/${locale}/...`.
+- Las rutas internas deben generarse con `Link`, `useRouter` de `@/i18n/navigation` para preservar el locale actual — no se deben hardcodear prefijos `/${locale}/...`. Los anclas de la landing se navegan con `Link href={{pathname: '/', hash: '...'}}`.
 - `middleware.ts` redirige automáticamente a `/es` o `/en` según la cookie `NEXT_LOCALE` o el idioma del navegador.
 
 ## API de contacto (envío de correo)
@@ -93,10 +95,10 @@ messages/
 El formulario de contacto envía `POST /api/send_email` (Route Handler en `src/app/api/send_email/route.ts`, procesada sólo en el servidor) usando `Nodemailer` + Gmail.
 
 - El remitente (`from`) es siempre el `SMTP_USER` autenticado (Gmail no permite `from` arbitrario). El email del usuario se usa como `replyTo`.
-- Los campos se validan según el tipo de contacto (`Phone` o `Email`) y el contenido se escapa antes de insertarlo en la plantilla HTML.
-- Requiere `SMTP_USER` y `SMTP_PASS` en `.env.local` (o variables de entorno del hosting).
+- Campos obligatorios: `name`, `email` (regex), `interest` (uno de `bi|automation|support|other`) y `message`. `website` es el honeypot anti-bots. Hay rate-limit en memoria y el contenido se escapa antes de insertarlo en la plantilla HTML.
+- Requiere `SMTP_USER` y `SMTP_PASS` en `.env.local` (o variables de entorno del hosting). Si no están configurados, la API responde 500 y el formulario muestra error (nunca éxito sin envío real).
 
-Cuerpo esperado: `{ name, company, requirementType, contactType, phone?, email?, projectDescription, businessSector }`.
+Cuerpo esperado: `{ name, email, interest, message, website }`.
 
 ## Despliegue
 

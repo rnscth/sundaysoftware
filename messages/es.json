@@ -1,161 +1,225 @@
 {
   "Metadata": {
-    "title": "Sunday Software Solutions",
-    "description": "Desarrollo de software personalizado, SaaS, automatización impulsada por IA con Microsoft Copilot Studio y soluciones de identidad con Microsoft Entra.",
-    "pages": {
-      "services": {
-        "title": "Servicios | Sunday Software Solutions",
-        "description": "Software a medida, SaaS, bots, automatización con IA mediante Microsoft Copilot Studio y soluciones de identidad con Microsoft Entra."
+    "title": "Sunday Software Solutions — Agentes de inteligencia de negocio, automatización con IA y soporte de aplicaciones",
+    "description": "Conectamos tus datos, procesos y aplicaciones para entender tu negocio y reducir el trabajo manual. Agentes de inteligencia de negocio, automatización con IA y soporte y modernización de aplicaciones."
+  },
+  "Nav": {
+    "services": "Servicios",
+    "method": "Método",
+    "company": "Empresa",
+    "cta": "Conversemos sobre tu proceso.",
+    "ariaLabel": "Navegación principal",
+    "mobileMenu": "Abrir menú",
+    "skipToContent": "Ir al contenido"
+  },
+  "Hero": {
+    "kicker": "Sunday Software Solutions",
+    "title1": "Conecta tus sistemas.",
+    "title2": "Entiende tu negocio.",
+    "title3": "Automatiza lo repetitivo.",
+    "description": "Sunday ayuda a empresas medianas a conectar datos, procesos y aplicaciones: preguntas financieras y operativas respondidas en lenguaje natural, trabajo manual automatizado y aplicaciones críticas documentadas, mantenidas y en evolución.",
+    "audience": "Hecho para dirección financiera, operaciones e IT — sin compromiso para empezar la conversación.",
+    "ctaPrimary": "Conversemos sobre tu proceso.",
+    "ctaSecondary": "Explorar soluciones",
+    "diagramLabel": "Vista ilustrativa",
+    "diagramSources": "Tus datos",
+    "diagramSourcesDesc": "ERP · bases de datos · sistemas existentes · documentos",
+    "diagramAgent": "Agente de negocio",
+    "diagramAgentSub": "Fuentes autorizadas, definiciones acordadas",
+    "diagramAnswers": "Respuestas",
+    "diagramAnswersDesc": "Lenguaje natural, con desgloses",
+    "diagramActions": "Acciones",
+    "diagramActionsDesc": "Reportes, registros y aprobaciones",
+    "diagramCaption": "Diagrama del servicio. Ilustrativo — sin datos reales."
+  },
+  "Problems": {
+    "kicker": "¿Te suena familiar?",
+    "title": "Datos que no hablan entre sí, procesos que dependen de personas.",
+    "items": {
+      "1": "Conseguir una cifra como saldos pendientes implica pedir un reporte y esperar días.",
+      "2": "Las variaciones de ventas o inventario se explican tarde — cuando ya no queda tiempo para actuar.",
+      "3": "Los equipos vuelven a capturar a mano datos que ya existen en los sistemas.",
+      "4": "Aplicaciones internas que nadie documentó y cuyo proveedor ya no responde.",
+      "5": "El conocimiento está en una o dos personas — y con él, el riesgo.",
+      "6": "Reportes que deberían salir solos se reconstruyen a mano cada mes."
+    },
+    "outro": "La tecnología no es lo que falta. Lo que falta es conexión, contexto y quien lo mantenga vivo."
+  },
+  "Services": {
+    "kicker": "Lo que hacemos",
+    "title": "Tres líneas, un mismo objetivo: que tu operación se sostenga sola.",
+    "illustrativeLabel": "Ejemplos ilustrativos",
+    "exampleLabel": "Ejemplo ilustrativo",
+    "noteLabel": "Nota sincera",
+    "bi": {
+      "title": "Agentes de inteligencia de negocio",
+      "tagline": "Pregunta en lenguaje natural; las respuestas salen de tus datos.",
+      "description": "Agentes que responden preguntas financieras y operativas consultando tus fuentes autorizadas — ERP, bases de datos, sistemas existentes — y responden en lenguaje natural, dentro de los permisos y definiciones de negocio que acordemos.",
+      "examples": {
+        "1": "Saldos de cuentas por cobrar / por pagar",
+        "2": "Variaciones de ventas por período y cliente",
+        "3": "Inventario y disponibilidad",
+        "4": "Cómo se relacionan las órdenes con los embarques"
       },
-      "about": {
-        "title": "Acerca de | Sunday Software Solutions",
-        "description": "Somos una empresa nearshore de software enfocada en desarrollo a medida, automatización con IA y soluciones cloud de Microsoft para PyMEs."
+      "note": "Los resultados dependen de tus datos, permisos y definiciones acordadas. No sustituyen asesoría financiera."
+    },
+    "auto": {
+      "title": "Automatización con IA",
+      "tagline": "Conecta aplicaciones, documentos y aprobaciones.",
+      "description": "Automatizamos procesos que cruzan aplicaciones, documentos, APIs, bases de datos y flujos de aprobación. El desarrollo a medida y las integraciones Microsoft son parte de esta capacidad, no una promesa aparte.",
+      "examples": {
+        "1": "Procesamiento de facturas y documentos",
+        "2": "Eliminar la captura doble de datos",
+        "3": "Reportes que se generan solos",
+        "4": "Coordinar trabajo entre sistemas"
       },
-      "contact": {
-        "title": "Contacto | Sunday Software Solutions",
-        "description": "Cuéntanos sobre tu proyecto: software a medida, SaaS, bots, automatización con IA o Microsoft Cloud. Te responderemos pronto."
+      "note": "Cada flujo se acota y se valida contigo antes de llegar a producción."
+    },
+    "support": {
+      "title": "Soporte y modernización de aplicaciones",
+      "tagline": "Aplicaciones documentadas, mantenidas y con futuro.",
+      "description": "Diagnóstico, documentación y mantenimiento de aplicaciones internas — incluidas las que nadie documentó y las que tu proveedor ya no soporta — para mantenerlas y evolucionarlas con confianza.",
+      "examples": {
+        "1": "Diagnosticar y documentar sistemas desconocidos",
+        "2": "Estabilizar y mantener la operación diaria",
+        "3": "Actualizar dependencias e integraciones",
+        "4": "Evolucionar funcionalidad en pasos controlados"
+      },
+      "note": "El soporte comienza con una evaluación de accesos, código y posibilidad de prueba. No tomamos ninguna aplicación a ciegas — y la visión incluye soporte asistido por IA con servicio recurrente."
+    }
+  },
+  "UseCases": {
+    "kicker": "Cómo se ve en una operación",
+    "title": "Tres escenarios, todos ilustrativos.",
+    "note": "Ejemplos ilustrativos de patrones típicos; no describen clientes específicos.",
+    "caseLabel": "Ejemplo ilustrativo",
+    "vis": {
+      "question": "Pregunta",
+      "answer": "Respuesta",
+      "q": "\"¿Por cobrar a más de 60 días?\"",
+      "a": "Desglose por cliente · directo del ERP",
+      "auto": {
+        "1": "Llega la factura",
+        "2": "Datos leídos y validados",
+        "3": "Se enruta la aprobación",
+        "4": "Se registra la entrada"
+      },
+      "support": {
+        "1": "Reglas",
+        "2": "Dependencias",
+        "3": "Pruebas",
+        "stabilized": "Documentado y operando bajo control"
+      }
+    },
+    "cases": {
+      "bi": {
+        "title": "Tu equipo pregunta; el ERP responde.",
+        "body": "En vez de esperar el cierre de mes, un responsable de finanzas pregunta \"¿cuánto tenemos por cobrar a clientes con más de 60 días?\" y recibe la respuesta con desglose por cliente, tomada directamente de los saldos del ERP."
+      },
+      "auto": {
+        "title": "Los documentos dejan de digitarse dos veces.",
+        "body": "Llega una factura → se leen sus datos → se validan contra el sistema → se enruta la aprobación → se registra la entrada. Nadie vuelve a escribir la información."
+      },
+      "support": {
+        "title": "Una aplicación que nadie conocía vuelve a estar bajo control.",
+        "body": "Se documentan sus reglas y dependencias, se estabiliza la operación y el siguiente cambio deja de depender de la memoria de una sola persona."
       }
     }
   },
-  "HomePage": {
-    "title": "Bienvenido a Sunday Software Solutions",
-    "description": "Brindamos desarrollo de software de alta calidad, soluciones SaaS, automatización impulsada por IA e integraciones con la nube de Microsoft.",
-    "services": {
-      "development": "Desarrollo de Software Personalizado",
-      "developmentDesc": "Creamos aplicaciones a medida para satisfacer las necesidades de tu negocio.",
-      "support": "Soporte Técnico",
-      "supportDesc": "Mesa de ayuda, soporte IT y mantenimiento para que tu tecnología funcione sin problemas.",
-      "saas": "Soluciones SaaS",
-      "saasDesc": "Soluciones en la nube para mejorar la eficiencia y escalabilidad.",
-      "bots": "Bots Automatizados",
-      "botsDesc": "Chatbots impulsados por IA para soporte al cliente y automatización empresarial.",
-      "ai": "Automatización con IA",
-      "aiDesc": "Agentes inteligentes y flujos de trabajo que optimizan tus operaciones y eliminan tareas repetitivas.",
-      "microsoft": "Microsoft Cloud e Identidad",
-      "microsoftDesc": "Identidad segura, gestión de accesos y acceso remoto a tus aplicaciones locales."
+  "Method": {
+    "kicker": "Cómo trabajamos",
+    "title": "Un método que convierte sistemas opacos en activos administrables.",
+    "steps": {
+      "1": {
+        "title": "Evaluar",
+        "body": "Miramos el estado real: sistemas, datos, reglas de negocio y cómo opera hoy el día a día."
+      },
+      "2": {
+        "title": "Documentar y conectar",
+        "body": "Documentamos sistemas y reglas, definimos directrices del entorno y montamos herramientas de diagnóstico, compilación, pruebas y conciliación que sostienen cualquier cambio posterior."
+      },
+      "3": {
+        "title": "Implementar y validar",
+        "body": "Construimos agentes y automatizaciones sobre ese contexto, con herramientas verificables, revisión humana y despliegues controlados según el riesgo."
+      },
+      "4": {
+        "title": "Mantener y evolucionar",
+        "body": "El conocimiento queda registrado, respaldado por un servicio recurrente de monitoreo, soporte y mejoras acordadas."
+      }
     },
-    "cta": {
-      "text": "¿Listo para llevar tu negocio al siguiente nivel?",
-      "button": "Contáctanos"
+    "benefitsTitle": "Por qué este método hace confiable el trabajo",
+    "benefits": {
+      "1": "Continuidad para tu operación",
+      "2": "Trazabilidad de cada cambio",
+      "3": "Menos dependencia de una sola persona",
+      "4": "Sistemas legacy que siguen siendo mantenibles y mejorables"
     }
   },
-  "Nav": {
-    "home": "Home",
-    "services": "Servicios",
-    "about": "Acerca de",
-    "contact": "Contacto",
-    "mobileMenu": "Abrir menú",
-    "skipToContent": "Saltar al contenido"
+  "Relationship": {
+    "kicker": "Modelo de relación",
+    "title": "Empezamos con alcance claro y continuamos por acuerdo.",
+    "items": {
+      "initial": {
+        "title": "Implementación inicial",
+        "body": "Un proyecto con alcance, hitos y resultados acordados para tu primera necesidad: un agente, una automatización o una aplicación estabilizada."
+      },
+      "recurrent": {
+        "title": "Servicio recurrente",
+        "body": "Monitoreo, soporte y mantenimiento con alcance definido — cuando tu operación lo pida. Enfocados en mejoras, no en apagar incendios."
+      },
+      "growth": {
+        "title": "Mejoras adicionales",
+        "body": "Evolución continua por acuerdo: nuevas consultas, nuevas automatizaciones, nuevas integraciones."
+      }
+    },
+    "honestNote": "Cada compromiso se define por escrito según tu caso. Nada de \"cobertura total 24/7\". Nada de promesas sin alcance."
   },
-  "Footer": {
-    "rightsReserved": "Todos los derechos reservados"
-  },
-  "Services": {
-    "title": "Nuestros Servicios",
-    "developmentTitle": "Desarrollo de Software",
-    "developmentDescription": "Ofrecemos soluciones de software personalizadas adaptadas a las necesidades de su negocio. Nuestra experiencia abarca diversas plataformas, asegurando la mejor opción para su proyecto.",
-    "customSoftwareDevelopment": "Desarrollo de Software Personalizado",
-    "mobileAppDevelopment": "Desarrollo de Aplicaciones Móviles",
-    "webAppDevelopment": "Desarrollo de Aplicaciones Web",
-    "enterpriseSolutions": "Soluciones Empresariales",
-
-    "supportTitle": "Soporte Técnico",
-    "supportDescription": "Ofrecemos servicios completos de soporte IT, desde la solución de problemas hasta el mantenimiento del sistema, asegurando que su tecnología funcione sin problemas.",
-    "itSupport": "Soporte IT",
-    "helpDeskServices": "Servicios de Mesa de Ayuda",
-    "maintenanceServices": "Mantenimiento y Actualización de Sistemas",
-
-    "saasTitle": "Software como Servicio (SaaS)",
-    "saasDescription": "Desarrollamos aplicaciones de software basadas en la nube para ayudar a su empresa a escalar. Ya sea una solución personalizada o una plataforma existente, entregamos productos SaaS seguros y escalables.",
-    "customSaaSDevelopment": "Desarrollo de SaaS Personalizado",
-    "cloudSolutions": "Soluciones en la Nube",
-    "scalableApps": "Aplicaciones Escalables y Fiables",
-
-    "botsTitle": "Bots y Automatización",
-    "botsDescription": "Nuestros servicios de desarrollo de bots ofrecen soluciones avanzadas de automatización, desde chatbots para soporte al cliente hasta bots para agendar citas, mejorando la experiencia del usuario y la eficiencia operativa.",
-    "whatsappBots": "Bots de WhatsApp para Interacción con Clientes",
-    "customerSupportBots": "Chatbots de Soporte al Cliente",
-    "appointmentSchedulingBots": "Automatización de Agendamiento de Citas",
-    "automatedResponseBots": "Bots de Respuestas Automatizadas",
-
-    "aiTitle": "Automatización con IA",
-    "aiDescription": "Diseñamos agentes inteligentes y flujos de trabajo automatizados impulsados por IA para reducir el trabajo manual, acelerar procesos y mejorar la toma de decisiones en tu organización.",
-    "aiWorkflowAutomation": "Automatización de Flujos de Trabajo con IA",
-    "customAiAgents": "Agentes de IA Personalizados",
-    "copilotStudioAgents": "Copilotos de Microsoft Copilot Studio",
-    "aiDocumentProcessing": "Procesamiento de Documentos con IA",
-
-    "microsoftTitle": "Soluciones Microsoft Cloud e Identidad",
-    "microsoftDescription": "Integramos tecnologías de Microsoft para asegurar identidades y conectar tus aplicaciones locales con la nube, habilitando trabajo remoto seguro y acceso unificado.",
-    "entraId": "Microsoft Entra ID (Gestión de Identidad y Accesos)",
-    "entraAppProxy": "Entra Application Proxy (Acceso Remoto Seguro a Apps Locales)",
-    "ssoMfaIntegration": "Integración de SSO y MFA",
-    "powerPlatformAutomation": "Power Platform y Automatización de Procesos"
-  },
-  "About": {
-    "title": "Acerca de Nosotros",
-    "introDescription": "Somos Sunday Software Solutions, una empresa enfocada en brindar soluciones de software innovadoras y personalizadas para pequeñas y medianas empresas. Nuestro objetivo es empoderar a los negocios mediante tecnologías de vanguardia y un soporte al cliente excepcional.",
-
-    "missionTitle": "Nuestra Misión",
-    "missionDescription": "Nuestra misión es entregar soluciones de software de alta calidad, confiables y escalables, que mejoren las operaciones comerciales y fomenten el crecimiento de nuestros clientes.",
-
-    "visionTitle": "Nuestra Visión",
-    "visionDescription": "Visualizamos convertirnos en líderes globales en la provisión de soluciones tecnológicas innovadoras para empresas de diversas industrias, ayudándolas a tener éxito en un mundo digital en constante evolución.",
-
-    "capabilitiesTitle": "Lo Que Ofrecemos",
-    "capability1Title": "Entrega de Software de Punta a Punta",
-    "capability1Description": "Del requerimiento al lanzamiento y más allá: desarrollo, pruebas y mantenimiento continuo con un único punto de contacto.",
-    "capability2Title": "Ecosistema de IA y Microsoft",
-    "capability2Description": "Agentes de IA, copilotos y soluciones de identidad construidos sobre Microsoft Copilot Studio y Microsoft Entra.",
-    "capability3Title": "Soporte Nearshore Bilingüe",
-    "capability3Description": "Soporte en inglés y español que combina la economía nearshore mexicana con calidad de estándar estadounidense.",
-
-    "locationTitle": "Nuestra Ubicación",
-    "locationDescription": "Estamos ubicados en el corazón de la ciudad, de fácil acceso y cerca de los principales centros de transporte.",
-
-    "extraInfoTitle": "¿Por Qué Elegirnos?",
-    "extraInfoDescription": "Estamos comprometidos con la excelencia, la satisfacción del cliente y la mejora continua. Con un equipo altamente capacitado, garantizamos los mejores resultados para todos nuestros clientes."
+  "Company": {
+    "kicker": "Sunday",
+    "title": "Una práctica construida para conectar lo que ya tienes — y mantenerlo vivo.",
+    "p1": "Sunday es una práctica de software e IA para empresas medianas. Trabajamos donde ya existen datos, procesos y aplicaciones valiosos, pero conectarlos, entenderlos y operarlos exige demasiado trabajo manual.",
+    "p2": "Nuestro fundador ha implementado agentes internos conectados a sistemas empresariales — incluido un ERP legacy — para consultas financieras y operativas. Nos presentamos sin teatro: sabemos lo que hay que documentar, probar y validar antes de prometer resultados.",
+    "honestNote": "Aquí no inventamos: cada ejemplo de esta página está marcado como ilustrativo."
   },
   "Contact": {
-    "title": "Contáctanos",
-    "introDescription": "¡Nos encantaría saber de ti! Por favor, completa el formulario a continuación y nuestro equipo se pondrá en contacto contigo lo antes posible.",
+    "kicker": "Contacto",
+    "title": "Conversemos sobre tu proceso.",
+    "description": "Cuéntanos brevemente qué quieres conectar, entender o automatizar. Te respondemos por correo o WhatsApp.",
     "name": "Nombre",
-    "company": "Compañía",
-    "requirementType": "Tipo de Requerimiento",
-    "selectrequirementType": "Selecciona un Requerimiento",
-    "development": "Desarrollo",
-    "support": "Soporte",
-    "saas": "SaaS",
-    "bot": "Bot",
-    "ai": "IA / Automatización",
-    "microsoft": "Microsoft / Entra",
-    "other": "Otro",
-    "contactType": "Tipo de Contacto",
-    "selectcontactType": "Selecciona Tipo de Contacto",
-    "Phone": "Teléfono",
-    "Email": "Correo Electrónico",
-    "projectDescription": "Descripción del Proyecto",
-    "businessSector": "Sector Comercial",
-    "orContactUs": "O contáctanos directamente:",
-    "submit": "Enviar",
-    "sending": "Enviando...",
-    "sendError": "Hubo un error al enviar tu solicitud. Por favor, inténtalo de nuevo.",
-    "networkError": "No pudimos conectar con el servidor. Revisa tu conexión a internet e inténtalo de nuevo.",
+    "email": "Correo electrónico",
+    "interest": "¿Sobre qué quieres conversar?",
+    "interestPlaceholder": "Elige una opción",
+    "interestBi": "Agentes de inteligencia de negocio",
+    "interestAuto": "Automatización con IA",
+    "interestSupport": "Soporte y modernización de aplicaciones",
+    "interestOther": "Otra necesidad",
+    "message": "Tu situación en unas líneas",
+    "submit": "Enviar mensaje",
+    "sending": "Enviando…",
+    "sendError": "No pudimos enviar tu mensaje. Intenta de nuevo.",
+    "networkError": "No pudimos conectar con el servidor. Revisa tu conexión e intenta de nuevo.",
     "close": "Cerrar",
     "requiredError": "Este campo es obligatorio.",
-    "requiredLabel": " (obligatorio)",
-    "invalidEmailError": "Por favor ingresa un correo electrónico válido.",
-    "invalidPhoneError": "Por favor ingresa un número de teléfono válido.",
-    "thankYouTitle": "¡Gracias!",
-    "thankYouMessage": "¡Gracias por ponerte en contacto con nosotros! Nos comunicaremos contigo lo antes posible. Puedes cerrar esta ventana para volver a la página principal."
+    "requiredLabel": "(obligatorio)",
+    "invalidEmailError": "Escribe un correo electrónico válido.",
+    "thankYouTitle": "¡Gracias por escribirnos!",
+    "thankYouMessage": "Recibimos tu mensaje y te responderemos pronto. Ya puedes cerrar esta ventana.",
+    "privacyNote": "Usamos tu información solo para responder a tu solicitud. Por favor no envíes documentos financieros ni información sensible por este formulario.",
+    "orDirect": "¿Prefieres escribirnos directo?",
+    "email": "Sunday.Software.Solutions@gmail.com",
+    "whatsapp": "+52 686 525 4888"
+  },
+  "Footer": {
+    "tagline": "Software e IA que conecta tus datos, procesos y aplicaciones.",
+    "rightsReserved": "Todos los derechos reservados."
   },
   "LocaleSwitcher": {
     "label": "Cambiar idioma",
-    "locale": "{locale, select, es {ES} en {EN} other {Unknown}}"
+    "locale": "{locale, select, es {ES} en {EN} other {Desconocido}}"
   },
   "ErrorPage": {
     "title": "Algo salió mal",
-    "description": "Ocurrió un error inesperado. Por favor, inténtalo de nuevo.",
+    "description": "Ocurrió un error inesperado. Intenta de nuevo.",
     "retry": "Reintentar"
   },
   "NotFound": {
@@ -164,6 +228,6 @@
     "home": "Volver al inicio"
   },
   "Loading": {
-    "text": "Cargando..."
+    "text": "Cargando…"
   }
 }

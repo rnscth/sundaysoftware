@@ -3,7 +3,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
     <main
       id="main"
       tabIndex={-1}
-      className="flex-1 bg-gradient-to-b from-fog to-ash page-enter focus:outline-none"
+      className="flex-1 bg-gradient-to-b from-shell to-ash-warm page-enter focus:outline-none"
     >
       {children}
     </main>

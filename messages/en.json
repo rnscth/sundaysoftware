@@ -1,153 +1,217 @@
 {
   "Metadata": {
-    "title": "Sunday Software Solutions",
-    "description": "Custom software development, SaaS, AI-driven automation with Microsoft Copilot Studio, and Microsoft Entra identity solutions.",
-    "pages": {
-      "services": {
-        "title": "Services | Sunday Software Solutions",
-        "description": "Custom software, SaaS, bots, AI-driven automation with Microsoft Copilot Studio, and Microsoft Entra identity solutions."
-      },
-      "about": {
-        "title": "About Us | Sunday Software Solutions",
-        "description": "We are a nearshore software company focused on custom development, AI-driven automation and Microsoft cloud solutions for SMBs."
-      },
-      "contact": {
-        "title": "Contact Us | Sunday Software Solutions",
-        "description": "Tell us about your project: custom software, SaaS, bots, AI automation or Microsoft Cloud. We will get back to you shortly."
-      }
-    }
-  },
-  "HomePage": {
-    "title": "Welcome to Sunday Software Solutions",
-    "description": "We provide top-notch software development, SaaS solutions, AI-driven automation and Microsoft cloud integrations.",
-    "services": {
-      "development": "Custom Software Development",
-      "developmentDesc": "We build tailored applications to meet your business needs.",
-      "support": "Technical Support",
-      "supportDesc": "Help desk, IT support and maintenance that keep your technology running smoothly.",
-      "saas": "SaaS Solutions",
-      "saasDesc": "Cloud-based solutions to enhance efficiency and scalability.",
-      "bots": "Automated Bots",
-      "botsDesc": "AI-driven chatbots for customer support and business automation.",
-      "ai": "AI-Driven Automation",
-      "aiDesc": "Intelligent agents and workflows that streamline operations and cut repetitive tasks.",
-      "microsoft": "Microsoft Cloud & Identity",
-      "microsoftDesc": "Secure identity, access management and remote access to your local applications."
-    },
-    "cta": {
-      "text": "Ready to take your business to the next level?",
-      "button": "Contact Us"
-    }
+    "title": "Sunday Software Solutions — Business Intelligence Agents, AI Automation & App Support",
+    "description": "We connect your data, processes and applications so you can understand your business and cut manual work. Business intelligence agents, AI-driven automation, and application support & modernization."
   },
   "Nav": {
-    "home": "Home",
     "services": "Services",
-    "about": "About",
-    "contact": "Contact",
+    "method": "Method",
+    "company": "Company",
+    "cta": "Let's talk about your process.",
+    "ariaLabel": "Main navigation",
     "mobileMenu": "Open menu",
     "skipToContent": "Skip to content"
   },
-  "Footer": {
-    "rightsReserved": "All Rights Reserved"
+  "Hero": {
+    "kicker": "Sunday Software Solutions",
+    "title1": "Connect your systems.",
+    "title2": "Understand your business.",
+    "title3": "Automate the repetitive.",
+    "description": "Sunday helps mid-size companies connect data, processes and applications: financial and operational questions answered in plain language, manual work automated, and business-critical applications documented, maintained and evolved.",
+    "audience": "Built for CFOs, operations and IT — no commitment to start the conversation.",
+    "ctaPrimary": "Let's talk about your process.",
+    "ctaSecondary": "Explore solutions",
+    "diagramLabel": "Illustrative overview",
+    "diagramSources": "Your data",
+    "diagramSourcesDesc": "ERP · databases · existing systems · documents",
+    "diagramAgent": "Business agent",
+    "diagramAgentSub": "Authorized sources, agreed definitions",
+    "diagramAnswers": "Answers",
+    "diagramAnswersDesc": "Plain language, with breakdowns",
+    "diagramActions": "Actions",
+    "diagramActionsDesc": "Reports, entries and approvals",
+    "diagramCaption": "Service overview diagram. Illustrative — no real data."
+  },
+  "Problems": {
+    "kicker": "Does this sound familiar?",
+    "title": "Data that doesn't talk to each other, processes that depend on people.",
+    "items": {
+      "1": "Getting a figure like outstanding receivables means requesting a report and waiting for days.",
+      "2": "Sales or inventory swings get explained too late — when there's no time left to act.",
+      "3": "Teams re-key by hand data that already exists in the systems.",
+      "4": "Internal applications no one documented, whose vendor no longer answers.",
+      "5": "Knowledge sits in one or two people — and so does the risk.",
+      "6": "Reports that should generate themselves get rebuilt by hand every month."
+    },
+    "outro": "Technology isn't what's missing. What's missing is connection, context, and someone to keep it alive."
   },
   "Services": {
-    "title": "Our Services",
-    "developmentTitle": "Software Development",
-    "developmentDescription": "We offer custom software solutions tailored to your business needs. Our expertise spans across various platforms, ensuring the right fit for your project.",
-    "customSoftwareDevelopment": "Custom Software Development",
-    "mobileAppDevelopment": "Mobile App Development",
-    "webAppDevelopment": "Web Application Development",
-    "enterpriseSolutions": "Enterprise Solutions",
-
-    "supportTitle": "Technical Support",
-    "supportDescription": "We provide comprehensive IT support services, from troubleshooting to system maintenance, ensuring your technology runs smoothly.",
-    "itSupport": "IT Support",
-    "helpDeskServices": "Help Desk Services",
-    "maintenanceServices": "Maintenance and System Updates",
-
-    "saasTitle": "Software as a Service (SaaS)",
-    "saasDescription": "We develop cloud-based software applications to help your business scale. Whether it's a custom solution or an existing platform, we deliver secure and scalable SaaS products.",
-    "customSaaSDevelopment": "Custom SaaS Development",
-    "cloudSolutions": "Cloud Solutions",
-    "scalableApps": "Scalable and Reliable Applications",
-
-    "botsTitle": "Bots and Automation",
-    "botsDescription": "Our bot development services offer advanced automation solutions, from chatbots for customer support to appointment scheduling bots, enhancing user experience and operational efficiency.",
-    "whatsappBots": "WhatsApp Bots for Customer Interaction",
-    "customerSupportBots": "Customer Support Chatbots",
-    "appointmentSchedulingBots": "Appointment Scheduling Automation",
-    "automatedResponseBots": "Automated Response Bots",
-
-    "aiTitle": "AI-Driven Automation",
-    "aiDescription": "We design intelligent agents and automated workflows powered by AI to reduce manual work, accelerate processes and improve decision making across your organization.",
-    "aiWorkflowAutomation": "AI Workflow Automation",
-    "customAiAgents": "Custom AI Agents",
-    "copilotStudioAgents": "Microsoft Copilot Studio Copilots",
-    "aiDocumentProcessing": "AI-Powered Document Processing",
-
-    "microsoftTitle": "Microsoft Cloud & Identity Solutions",
-    "microsoftDescription": "We integrate Microsoft technologies to secure identities and connect your local applications with the cloud, enabling secure remote work and unified access.",
-    "entraId": "Microsoft Entra ID (Identity & Access Management)",
-    "entraAppProxy": "Entra Application Proxy (Secure Remote Access to Local Apps)",
-    "ssoMfaIntegration": "SSO & MFA Integration",
-    "powerPlatformAutomation": "Power Platform & Process Automation"
+    "kicker": "What we do",
+    "title": "Three lines, one goal: an operation that sustains itself.",
+    "illustrativeLabel": "Illustrative examples",
+    "exampleLabel": "Illustrative example",
+    "noteLabel": "Straight talk",
+    "bi": {
+      "title": "Business Intelligence Agents",
+      "tagline": "Ask in plain language; answers come from your data.",
+      "description": "Agents that answer financial and operational questions by consulting your authorized sources — ERP, databases, existing systems — and respond in plain language, within the permissions and business definitions we agree on.",
+      "examples": {
+        "1": "Outstanding receivables / payables",
+        "2": "Sales variances by period and customer",
+        "3": "Inventory and availability",
+        "4": "How orders connect to shipments"
+      },
+      "note": "Results depend on your data, permissions and agreed definitions. They don't replace financial advice."
+    },
+    "auto": {
+      "title": "AI-Driven Automation",
+      "tagline": "Connect applications, documents and approvals.",
+      "description": "We automate processes that cross applications, documents, APIs, databases and approval flows. Custom development and Microsoft integrations are part of this capability — not a separate pitch.",
+      "examples": {
+        "1": "Processing invoices and documents",
+        "2": "Eliminating double data entry",
+        "3": "Reports that generate themselves",
+        "4": "Orchestrating work across systems"
+      },
+      "note": "Every workflow is scoped and validated with you before anything reaches production."
+    },
+    "support": {
+      "title": "Application Support & Legacy Modernization",
+      "tagline": "Applications documented, maintained, and with a future.",
+      "description": "Diagnosis, documentation and maintenance for internal applications — including the ones nobody documented and the ones your vendor no longer supports — so they can be maintained and evolved with confidence.",
+      "examples": {
+        "1": "Diagnose and document unknown systems",
+        "2": "Stabilize and maintain daily operation",
+        "3": "Update dependencies and integrations",
+        "4": "Evolve functionality in controlled steps"
+      },
+      "note": "Support starts with an assessment of access, code and testability. We don't take any application on faith — and the vision includes AI-assisted support and a recurring service."
+    }
   },
-  "About": {
-    "title": "About Us",
-    "introDescription": "We are Sunday Software Solutions, a company focused on providing cutting-edge software solutions tailored to meet the needs of small and medium-sized businesses. Our goal is to empower businesses through innovative technologies and exceptional customer support.",
-
-    "missionTitle": "Our Mission",
-    "missionDescription": "Our mission is to deliver high-quality, reliable, and scalable software solutions that enhance business operations and foster growth.",
-
-    "visionTitle": "Our Vision",
-    "visionDescription": "We envision becoming a global leader in providing innovative technology solutions to businesses across various industries, helping them succeed in a rapidly evolving digital world.",
-
-"capabilitiesTitle": "What We Offer",
-    "capability1Title": "End-to-End Software Delivery",
-    "capability1Description": "From requirements to launch and beyond: development, testing, and ongoing maintenance with a single point of contact.",
-    "capability2Title": "AI & Microsoft Ecosystem",
-    "capability2Description": "AI agents, copilots, and identity solutions built on Microsoft Copilot Studio and Microsoft Entra.",
-    "capability3Title": "Bilingual Nearshore Support",
-    "capability3Description": "English and Spanish support that combines Mexican nearshore economics with US-standard quality.",
-
-    "locationTitle": "Our Location",
-    "locationDescription": "We are located in the heart of the city, easily accessible and close to major transportation hubs.",
-
-    "extraInfoTitle": "Why Choose Us",
-    "extraInfoDescription": "We are committed to excellence, customer satisfaction, and continuous improvement. With a highly skilled team, we ensure the best results for all of our clients."
+  "UseCases": {
+    "kicker": "What this looks like in an operation",
+    "title": "Three scenarios, all illustrative.",
+    "note": "Illustrative examples of typical patterns — not descriptions of specific clients.",
+    "caseLabel": "Illustrative example",
+    "vis": {
+      "question": "Question",
+      "answer": "Answer",
+      "q": "\"Outstanding beyond 60 days?\"",
+      "a": "Per-customer breakdown · straight from the ERP",
+      "auto": {
+        "1": "Invoice arrives",
+        "2": "Fields read & validated",
+        "3": "Approval routed",
+        "4": "Entry posted"
+      },
+      "support": {
+        "1": "Rules",
+        "2": "Dependencies",
+        "3": "Testability",
+        "stabilized": "Documented & running under control"
+      }
+    },
+    "cases": {
+      "bi": {
+        "title": "Your team asks; the ERP answers.",
+        "body": "Instead of waiting for month-end closing, a finance lead asks \"what do we have outstanding from customers beyond 60 days?\" and gets the answer with a per-customer breakdown, taken directly from ERP balances."
+      },
+      "auto": {
+        "title": "Documents stop being typed twice.",
+        "body": "An invoice arrives → fields are read → validated against the system → an approval is routed → the entry is posted. No one re-types the information."
+      },
+      "support": {
+        "title": "An application nobody knew is under control again.",
+        "body": "Its rules and dependencies get documented, operation stabilizes, and the next change no longer depends on one person's memory."
+      }
+    }
+  },
+  "Method": {
+    "kicker": "How we work",
+    "title": "A method that turns opaque systems into manageable assets.",
+    "steps": {
+      "1": {
+        "title": "Assess",
+        "body": "We look at the real state: systems, data, business rules and how operations actually run today."
+      },
+      "2": {
+        "title": "Document & connect",
+        "body": "We document systems and rules, define environment guidelines, and set up diagnostic, build, testing and reconciliation tooling that underpins any later change."
+      },
+      "3": {
+        "title": "Implement & validate",
+        "body": "We build agents and automations on that context, with verifiable tooling, human review and releases controlled by risk."
+      },
+      "4": {
+        "title": "Maintain & evolve",
+        "body": "Knowledge stays recorded, backed by a recurring service for monitoring, support and agreed improvements."
+      }
+    },
+    "benefitsTitle": "Why this method makes the work reliable",
+    "benefits": {
+      "1": "Continuity for your operation",
+      "2": "Traceability for every change",
+      "3": "Less dependence on a single person",
+      "4": "Legacy systems stay maintainable and improvable"
+    }
+  },
+  "Relationship": {
+    "kicker": "Relationship model",
+    "title": "We start with clear scope and continue by agreement.",
+    "items": {
+      "initial": {
+        "title": "Initial implementation",
+        "body": "A project with agreed scope, milestones and outcomes for your first need: an agent, an automation, or a stabilized application."
+      },
+      "recurrent": {
+        "title": "Recurring service",
+        "body": "Monitoring, support and maintenance within a defined scope — when your operation calls for it. Focus on improvements, not firefighting."
+      },
+      "growth": {
+        "title": "Additional improvements",
+        "body": "Continuous evolution by agreement: new questions, new automations, new integrations."
+      }
+    },
+    "honestNote": "Every commitment is defined in writing for your case. No \"24/7 total coverage\". No promises without scope."
+  },
+  "Company": {
+    "kicker": "Sunday",
+    "title": "A practice built around connecting what you already have — and keeping it alive.",
+    "p1": "Sunday is a software and AI practice for mid-size companies. We work where valuable data, processes and applications already exist, but connecting them, understanding them and operating them takes too much manual work.",
+    "p2": "Our founder has implemented internal agents connected to business systems — including a legacy ERP — for financial and operational questions. We introduce ourselves without theater: we know what must be documented, tested and validated before results are promised.",
+    "honestNote": "We don't make things up: every example on this page is labeled illustrative."
   },
   "Contact": {
-    "title": "Contact Us",
-    "introDescription": "We would love to hear from you! Please fill out the form below, and our team will get in touch with you as soon as possible.",
+    "kicker": "Contact",
+    "title": "Let's talk about your process.",
+    "description": "Tell us briefly what you want to connect, understand or automate. We reply by email or WhatsApp.",
     "name": "Name",
-    "company": "Company",
-    "requirementType": "Requirement Type",
-    "selectrequirementType": "Select a Requirement",
-    "development": "Development",
-    "support": "Support",
-    "saas": "SaaS",
-    "bot": "Bot",
-    "ai": "AI / Automation",
-    "microsoft": "Microsoft / Entra",
-    "other": "Other",
-    "contactType": "Contact Type",
-    "selectcontactType": "Select Contact Type",
-    "Phone": "Phone",
-    "Email": "Email",
-    "projectDescription": "Project Description",
-    "businessSector": "Business Sector",
-    "orContactUs": "Or Contact Us Directly:",
-    "submit": "Submit",
-    "sending": "Sending...",
-    "sendError": "There was an error sending your request. Please try again.",
-    "networkError": "We couldn't reach the server. Please check your internet connection and try again.",
+    "email": "Email",
+    "interest": "What do you want to talk about?",
+    "interestPlaceholder": "Choose an option",
+    "interestBi": "Business Intelligence Agents",
+    "interestAuto": "AI-Driven Automation",
+    "interestSupport": "Application Support & Modernization",
+    "interestOther": "Another need",
+    "message": "Your situation, in a few lines",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "sendError": "We couldn't send your message. Please try again.",
+    "networkError": "We couldn't reach the server. Check your connection and try again.",
     "close": "Close",
     "requiredError": "This field is required.",
-    "requiredLabel": " (required)",
-    "invalidEmailError": "Please enter a valid email address.",
-    "invalidPhoneError": "Please enter a valid phone number.",
-    "thankYouTitle": "Thank You!",
-    "thankYouMessage": "Thank you for reaching out! We will get back to you as soon as possible. You can close this window to return to the homepage."
+    "requiredLabel": "(required)",
+    "invalidEmailError": "Enter a valid email address.",
+    "thankYouTitle": "Thank you for writing!",
+    "thankYouMessage": "We received your message and will get back to you soon. You can close this window.",
+    "privacyNote": "We use your information only to reply to your request. Please don't send financial documents or sensitive information through this form.",
+    "orDirect": "Prefer to write to us directly?",
+    "email": "Sunday.Software.Solutions@gmail.com",
+    "whatsapp": "+52 686 525 4888"
+  },
+  "Footer": {
+    "tagline": "Software and AI that connects your data, processes and applications.",
+    "rightsReserved": "All Rights Reserved"
   },
   "LocaleSwitcher": {
     "label": "Change language",
@@ -164,6 +228,6 @@
     "home": "Back to home"
   },
   "Loading": {
-    "text": "Loading..."
+    "text": "Loading…"
   }
 }

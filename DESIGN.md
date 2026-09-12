@@ -1,247 +1,187 @@
 ---
 name: Sunday Software Solutions
-description: Calm, dependable bilingual SMB software-services site — a dark charcoal workbench on a grey field with color-coded service tools.
+description: Warm midnight-and-amber single-page landing for a software and AI practice — sunrise over a flowing process. The Sunrise S mark anchors a dark-to-ivory journey from messy systems to understandable, automated, maintained operations.
 colors:
-  charcoal-slate: "#2f3337"
-  deep-slate: "#1f2937"
-  mid-slate: "#374151"
-  wet-ink: "#333333"
-  mist-grey: "#9a9fa3"
-  cloud-guard: "#babbbc"
-  fog: "#f3f4f6"
-  ash: "#d1d5db"
-  card-surface: "#ffffff"
-  faint-ink: "#6b7280"
-  muted-ink: "#4b5563"
-  locale-ink: "#9ca3af"
-  code-blue: "#2563eb"
-  cloud-purple: "#9333ea"
-  bot-gold: "#a16207"
-  ai-red: "#dc2626"
-  microsoft-blue: "#3b82f6"
-  support-green: "#16a34a"
-  error: "#dc2626"
+  midnight: "#101C2C"
+  midnight-soft: "#16263C"
+  midnight-raised: "#1D3048"
+  sunburst: "#FFB547"
+  sunburst-hover: "#FFC76B"
+  amber-deep: "#92400E"
+  amber-soft: "rgba(255,181,71,0.14)"
+  ivory: "#F5F0E6"
+  ivory-muted: "#A8B3C2"
+  shell: "#FAF6EE"
+  ash-warm: "#EAE3D4"
+  ink: "#23303F"
+  ink-muted: "#58697B"
+  ink-faint: "#75869A"
+  line: "rgba(16,28,44,0.10)"
+  line-dark: "rgba(245,240,230,0.16)"
+  error: "#B42318"
+  overlay: "rgba(9,16,28,0.66)"
+  ease-smooth: "cubic-bezier(0.22,1,0.36,1)"
 typography:
   display:
-    fontFamily: "Inter, Arial, Helvetica, sans-serif"
-    fontSize: "3rem"
-    fontWeight: 700
-    lineHeight: 1
-  headline:
-    fontFamily: "Inter, Arial, Helvetica, sans-serif"
-    fontSize: "2.25rem"
-    fontWeight: 700
-    lineHeight: 1.25
-  title:
-    fontFamily: "Inter, Arial, Helvetica, sans-serif"
-    fontSize: "1.5rem"
-    fontWeight: 600
-    lineHeight: 1.25
+    fontFamily: "Fraunces, Georgia, serif"
+    weight: 600-700
   body:
-    fontFamily: "Inter, Arial, Helvetica, sans-serif"
-    fontSize: "1.125rem"
-    fontWeight: 400
-    lineHeight: 1.75
-  label:
-    fontFamily: "Inter, Arial, Helvetica, sans-serif"
-    fontSize: "0.875rem"
-    fontWeight: 500
+    fontFamily: "Inter, Arial, sans-serif"
+    weight: 400
+    size: "1rem–1.125rem"
 rounded:
-  base: "4px"
-  pill: "5px"
-  md: "6px"
-  lg: "8px"
-  full: "9999px"
+  panel: "24px (rounded-3xl)"
+  inner: "16px (rounded-2xl)"
+  chip: "9999px"
 spacing:
-  sm: "8px"
-  md: "16px"
-  lg: "24px"
-  xl: "32px"
-  col-gap: "40px"
-  page: "48px"
+  section: "80–112px vertical (py-20 lg:py-28)"
+  panel-padding: "32–40px"
+  col-gap: "24px"
 components:
-  button-primary:
-    backgroundColor: "{colors.deep-slate}"
-    textColor: "{colors.card-surface}"
-    rounded: "{rounded.lg}"
-    padding: "12px 24px"
-  button-primary-hover:
-    backgroundColor: "{colors.mid-slate}"
-  card-service:
-    backgroundColor: "{colors.card-surface}"
-    textColor: "{colors.wet-ink}"
-    rounded: "{rounded.lg}"
-    padding: "32px"
+  button-primary-hero:
+    backgroundColor: "{colors.sunburst}"
+    textColor: "{colors.midnight}"
+    rounded: "full"
+    hoverBackground: "{colors.sunburst-hover}"
+  button-cta:
+    backgroundColor: "{colors.midnight}"
+    textColor: "{colors.ivory}"
+    rounded: "full"
+    hoverBackground: "{colors.midnight-soft}"
+  panel:
+    backgroundColor: "{colors.ivory}"
+    border: "1px {colors.line}"
+    rounded: "{rounded.panel}"
   input-field:
-    backgroundColor: "{colors.card-surface}"
-    textColor: "{colors.wet-ink}"
-    rounded: "{rounded.md}"
-    padding: "8px"
-  nav-link:
-    textColor: "{colors.card-surface}"
-    padding: "8px"
-    hoverBackground: "{colors.mid-slate}"
-  avatar:
-    rounded: "{rounded.full}"
-    size: "128px"
+    backgroundColor: "{colors.shell}"
+    border: "1px {colors.line}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.inner}"
 ---
 
 # Design System: Sunday Software Solutions
 
 ## Overview
 
-**Creative North Star: "The Steady Workbench"**
+**Creative North Star: "Sunrise over a flowing process"**
 
-Sunday Software Solutions presents itself as the dependable shop where growing companies bring work to be built, automated, and supported. The visual system makes that concrete: a solid dark workbench (the header and footer) anchors a calm grey field where white canvases — the service cards — sit ready for inspection, each tagged with the colored handle of the tool it represents. Nothing glitters and nothing shouts; the energy lives only in the small, colored icons that say "this is the kind of work we do here."
+Sunday is a software and AI practice that connects the systems a company already runs — data, processes, applications — and keeps an honest method behind it. The visual world turns that promise into a warm, specific journey: the page opens in deep midnight (the systems, opaque and connected), runs through ivory panels (the working surfaces where problems become plans), and points everything at sunrise amber (the moment things become understandable, automated and under control). The sunrise S engraved as "S" — the **Sunrise S** mark, one continuous flowing stroke between two colors — is the whole identity: header brand, footer brand, favicon. It is never redrawn; a single `BrandMark` component renders the exact vector.
 
-The system is deliberately neutral and quiet so that a non-technical business owner can read it without friction. Density is moderate: centered layouts, generous white space, one clear idea per panel. Hierarchy is achieved through weight (bold dark headings) and surface (white cards on grey), never through color. Depth is flat by default and reserved for interaction: a card or button lifts slightly and hardens its shadow when the visitor touches it, which makes hover the moment the page physically acknowledges the user.
+This is a **Persuade** surface. Long-form one-page, generous rhythm, real typographic hierarchy from two deliberately contrasted families: Fraunces (warm, contemporary serif) for display statements, Inter for the operating text underneath. Sections alternate dark structure and warm light fields with hairlines and soft panels — never uniform card grids, never the same-size-icon-plus-text rectangle repeated. Composition is asymmetric on purpose (7/5 and offset 8/12 columns) so the page reads like an argument moving forward, not a menu.
 
-Aesthetics run utilitarian-professional: a single sans family (Inter), restrained radius, and a strict rule that saturated color is the exclusive language of the service icons. This is a calm, neutral, confident reading experience — the web presence of a partner you hand your software problems to and expect a steady answer back.
-
-**Key Characteristics:**
-- Dark charcoal structure (header/footer/CTAs) framing a grey-gradient field of white cards.
-- Saturated color used only as per-service icon "tool handles"; nothing else is colorful.
-- Flat surfaces at rest; lift + deepened shadow as the only hover language.
-- One font, one weight argument done with dark ink and bold weights.
+Aesthetics: warm-professional and precise. Amber appears only in two jobs — the brand voice (kickers, numbers, the S's colors, small rules) and the honest labels ("Straight talk", "Illustrative example"). Everything else is warm ink on warm ivory with midnight structure. Depth is quiet: panels declare a border or a shadow, never both; the single floating moment is the emphasized "Recurring service" panel that lifts slightly out of its row.
 
 ## Colors
 
-A cool slate-and-grey family with a restrained spectrum of tool colors used only on icons. The palette reads grey-on-grey with dark charcoal anchoring; any hue signals "service domain," not "brand."
+A warm midnight-and-amber family on ivory. Dark = structure and brand; amber = voice and honesty; ivory/warm-grey = the reading field.
 
-### Primary
-- **Charcoal Slate** (#2f3337): the workbench frame. Header and footer background, white text above it. Also the global default body text tone. This is the structural dark: use it for full-width surfaces, never for small accents.
-- **Deep Slate** (#1f2937): the CTA and workhorse dark. Fills primary buttons, the modal's focus ring, and doubles as the deepest heading ink (text-gray-800). The only color allowed to be both a fill and text.
-- **Mid Slate** (#374151): the CTA hover state and the standard body ink (text-gray-700); also the modal panel background.
+### Brand & Structure
+- **Midnight** (#101C2C): header, footer, hero, the Company band and emphasized Relationship panel. The dark that expects light text. Also used for the form submit button and stronger focus rings.
+- **Midnight Soft** (#16263C): raised dark panels inside dark areas (hero diagram inner surfaces).
+- **Midnight Raised** (#1D3048): the top dark panel in the hero diagram, the mobile menu dropdown, the success modal.
 
-### Neutral
-- **Card Surface** (#ffffff): every content panel — service cards, form card, About panels, mobile menu.
-- **Wet Ink** (#333333): default body text from the global stylesheet.
-- **Muted Ink** (#4b5563): secondary body tones, list items, hero description (text-gray-600).
-- **Faint Ink** (#6b7280): tertiary body tones (text-gray-500).
-- **Locale Ink** (#9ca3af): the language switcher on the dark header (text-gray-400).
-- **Fog** (#f3f4f6) / **Ash** (#d1d5db): the page shell — a soft top-down grey gradient (from-gray-100 to-gray-300) behind all white panels.
-- **Mist Grey** (#9a9fa3): legacy global page background; the field the gradient sits on.
-- **Cloud Guard** (#babbbc): the light hover wash behind nav links on the dark header.
+### Voice & Honesty (amber)
+- **Sunburst** (#FFB547): the hero's amber line, dark-surface accents, selection, small rules, and the emphasized-dark-surface text. On white it exists only as decorative dots/underlines, never as small text.
+- **Sunburst Hover** (#FFC76B): hover of the amber primary button.
+- **Amber Deep** (#92400E): small amber text and icons on light surfaces (kickers, sequence numbers, honest-chips) — clears 4.5:1 on ivory.
+- **Amber Soft** (rgba(255,181,71,0.14)): the honest-chips and method-step dot halo.
 
-### Tool Spectrum (icons, 600-scale accents)
-- **Code Blue** (#2563eb): software development.
-- **Cloud Purple** (#9333ea): SaaS and cloud solutions.
-- **Bot Gold** (#a16207): bots and messaging. **Deliberate deviation from the original #ca8a04:** darkened one step (yellow-700) so the icon clears the 3:1 non-text contrast threshold on white cards.
-- **AI Red** (#dc2626): AI-driven automation.
-- **Microsoft Blue** (#3b82f6): Copilot Studio and Microsoft platform.
-- **Support Green** (#16a34a): technical support.
-- **Error** (#dc2626): inline form errors and the required asterisk (alias of AI Red — same value, semantic name).
+### Reading Field
+- **Ivory** (#F5F0E6): panel and card surfaces — deliberately warm, never pure white.
+- **Shell** (#FAF6EE) → **Ash Warm** (#EAE3D4): the page gradient field behind panels.
+- **Ivory Muted** (#A8B3C2): secondary text on dark surfaces (7:1 on midnight).
+- **Ink** (#23303F): primary text on light. **Ink Muted** (#58697B): secondary text on light (4.8:1). **Ink Faint** (#75869A): light-surface third-tier only below 4.5:1 → stays off light surfaces; use on dark or decorative.
 
-**The Workbench Rule.** Dark charcoal surfaces exist only as structure — the header, the footer, the button fill. The grey gradient field is never replaced with a dark or saturated background.
+### Lines & System
+- **Line** (rgba(16,28,44,0.10)): hairline borders on light. **Line Dark** (rgba(245,240,230,0.16)): hairlines on dark.
+- **Error** (#B42318): form errors and required markers.
+- **Overlay** (rgba(9,16,28,0.66)): modal scrim.
 
-**The One Service, One Tool Rule.** Each service keeps the same icon color on every page (Home and Services). The icon is the only saturated element on any screen; count it as ≤10–15% of the pixels.
+**The Two-Jobs-Only Rule for amber.** Amber is the brand voice (the S, kickers, numbers, small rules, honest chips) and nothing else. It never fills large backgrounds, never carries small body text on light surfaces, never degrades to gradients.
 
-**The Neutral Field Rule.** Hierarchy comes from ink weight and surface contrast (white on grey), never from color. If an element needs emphasis and it is not a service icon or a CTA, make it darker and heavier — not red, not blue.
+**The Warm-Field Rule.** Every light surface is warm (ivory/shell, never white, never grey). Every dark surface is the same midnight family so header, hero and footer read as one continuous block.
 
 ## Typography
 
-**Display Font:** Inter (Arial/Helvetica fallback, loaded via `next/font`)
-**Body Font:** Inter
-**Label/Mono Font:** none distinct
+**Display:** Fraunces 600/700 (variable, classic-but-warm serif, loaded via `next/font/google` with `--font-fraunces`; class `.font-display`). **Body/UI:** Inter 400/500/600.
 
-**Character:** One quiet, utilitarian family. Inter carries no editorial voice — that is the point. Emphasis is expressed through weight (bold dark headings) and size steps, giving a professional-services calm. No display serif, no mono, no flourishes.
+**Character:** The serif carries the warmth and the honesty of a craft practice; Inter carries the operating detail underneath. Two families earn the page's hierarchy: size + weight on the serif for statements, small caps for labels.
 
 ### Hierarchy
-- **Display** (700, 3rem / text-5xl, lh 1): only the home hero title. Do not reuse this scale for inner-page headings.
-- **Headline** (700, 2.25rem / text-4xl, lh 1.25): page titles across Services, About, Contact; the error/not-found titles.
-- **Title** (600, 1.5rem / text-2xl, lh 1.25): card titles, section headings inside About, the brand line, modal title.
-- **Body** (400, 1.125rem / text-lg, lh 1.75): paragraphs and card descriptions under headings; intro and CTA text.
-- **Label** (500, 0.875rem / text-sm, lh normal): form field labels and nav links; lower-case, no letterspacing games.
+- **Display/hero** (600, ~3.4rem, lh 1.08): one h1, three short lines, the third in Sunburst.
+- **Section title** (600, 3–3.5rem, lh 1.15 tight): one per section.
+- **Panel title** (600, 1.5–1.7rem): service lines, scenarios, method steps, relationship items.
+- **Body** (400, 1–1.125rem, lh 1.7): statements under titles.
+- **Label** (600, 0.75rem, uppercase, tracking 0.18–0.22em, amber or ink-muted): kickers, "Straight talk", honest chips. Amber labels on dark are Sunburst; on light they are Amber Deep.
 
-**The Bold Ink Rule.** Headings are dark and heavy (gray-800/gray-900 family, weight ≥600) against white or grey. Never lighten a heading for style; weight and size are the whole hierarchy argument.
+**Kickers earn their place:** on this single-page anchor layout they are the reader's wayfinding labels ("What we do", "How we work", "Contact"), and their amber color is the signature handle of the Sunrise identity — the same job the S's upper curve does.
+
+**The Serif-Warmth Rule.** Headings are Fraunces in Midnight or Ivory; never lighten for style, never letter-space the serif.
 
 ## Layout
 
-Every page is a single centered container (`container mx-auto`) with horizontal padding `px-6` and vertical rhythm `py-12`, sitting on the fog-to-ash gradient shell. Component instant: the profile header row and footer, a full-page hero or title block, then a grid of white panels, then a center-aligned CTA row.
+A single centered column (`max-w-6xl`, `px-6`) running down a shell→ash-warm gradient. Rhythm alternates: dark hero → ivory-light field → border-separated light sections → a contained ivory method panel → emphasized midnight Relationship panel → full-width midnight Company band → light Contact. Sections breathe with `py-20 lg:py-28`; hairlines (`border-line`) separate adjacent light sections.
 
-- Home: hero (centered), then a service-card grid that is 1 column mobile → 2 columns at `md` (768px) → 3 columns at `lg` (1024px), then a centered CTA section.
-- Services: a 1 → 2-column grid of service panels at `md`.
-- About: centered intro, stacked white panels (mission/vision, location), then a 1 → 3-column capabilities grid at `md` ("What We Offer").
-- Contact: centered intro, a single white form card constrained to `max-w-lg` (~512px), then direct contact channels.
-- Mobile: cards collapse to a single column; the nav collapses to brand + locale switcher + a hamburger that opens a white dropdown menu (`w-60`, centered under the header).
-- Column gaps use the 40px column gap; internal card padding is 32px; page vertical sections are spaced at 48px.
+- **Hero:** 1-col mobile → 2-col at `lg`; left text (kicker, three-beat serif title with one amber line, description, audience line, two CTAs: amber "Conversemos sobre tu proceso." → `#contact`; ghost "Explorar soluciones" → `#services`); right the overview diagram — a labeled, honest schematic: sources → agent → answers/actions, ~no invented numbers.
+- **Problems:** 1 → 2-col list of six pain statements with amber dots; closes with a serif outtake (the "connection is missing" line).
+- **Services:** asymmetric 12-col grid. BI 7 cols + Automation 5 cols on row one; Support 8 cols offset to `col-start-5` on row two. Panels are ivory with hairline borders and amber sequence numbers (01/02/03).
+- **Scenarios:** three alternating two-col rows; text + abstract geometry visuals (Q→A card, document pipeline pills, rules/dependencies/tests → status), each with an "Illustrative example" cherry chip.
+- **Method:** contained ivory panel; four steps on a md+ top hairline with amber dots; a benefits strip below.
+- **Relationship:** three panels; the middle ("Recurring service") is Midnight, `md:-my-4`, shadow — the only floating surface.
+- **Company:** full-width Midnight band; honed prose referencing the founder's internal-agent work without client claims; Sunburst honest chip.
+- **Contact:** 2-col at `lg`; left = heading, direct email/WhatsApp links with amber icons, privacy note; right = ivory form panel (`ContactForm`).
 
 ## Elevation & Depth
 
-Flat by default. The visual world is two-dimensional — dark frame, grey field, white panels — and depth appears only as a response to interaction plus one persistent control shadow. No permanent card elevation, no floating surfaces at rest.
+Depth is quiet and declared once. Panels use either a hairline border on the warm field, or a shadow on a dark surface — never both. The `--ease-smooth` token (`cubic-bezier(0.22,1,0.36,1)`) drives every transition (colors, backgrounds, transform) and is disabled under `prefers-reduced-motion`.
 
-Interaction motion uses a single decelerate easing token, `--ease-smooth` (`cubic-bezier(0.22, 1, 0.36, 1)`): fast start, slow settle — no linear, no bounce. It applies to every lift, shadow change, background/color fade and page-transition; it is disabled entirely under `prefers-reduced-motion`.
-
-### Shadow Vocabulary
-- **control-rest** (`0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1)`, shadow-md): the resting state of buttons and the white mobile menu; also the map embed.
-- **panel-rest** (`0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)`, shadow-lg): resting white cards.
-- **panel-lift** (`0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1)`, shadow-xl): the hover state of cards, paired with `scale(1.05)` over 300ms.
-- **modal-overlay** (`rgba(0,0,0,0.6)`): the full-screen scrim behind the success dialog.
-
-**The Flat-Rest Rule.** Nothing is elevated at rest except inputs and controls. Hover is the only moment a card or button physically lifts, and when it lifts it does so with the 300ms ease and the deepened shadow — never with a hue change.
+- Buttons: background-color + subtle transform on hover; focus-visible rings (Sunburst on dark, Midnight on light) with matching `ring-offset`.
+- Cards/panels: no lift by default; the only floating object is the emphasized midnight Relationship panel.
 
 ## Shapes
 
-A soft, rounded-rectangle form language with discipline on which radius goes where: cards and buttons are gently rounded (8px, rounded-lg), form controls are a step tighter (6px, rounded-md), and the nav-link hover is a small soft pill on the header (5px). This is the classic "white card on grey field" idiom — corners are soft enough to feel friendly to non-technical owners, never pill-shaped or gimmicky. Borders are rare on cards; separation comes from the grey field and shadows rather than strokes. Global legacy styles in `globals.css` are dead surface; the active system is the Tailwind utility set described here.
+Panels `rounded-3xl` (24px), inner surfaces and inputs `rounded-2xl`/`rounded-lg` (16/8px), interactive chips and CTAs full-pill. Hairline borders (1px) are the primary separation language on light; dark surfaces separate by background alone.
 
 ## Components
 
 ### Buttons
-- **Shape:** gently rounded, 8px radius.
-- **Primary:** Deep Slate (#1f2937) fill, white text, padding 12px 24px, Inter 500.
-- **Hover / Focus:** Mid Slate (#374151) fill + `scale(1.05)` + deepened shadow over 300ms; `focus-visible` ring is a 2px Deep Slate outline around the button.
-- **States:** disabled is a 60% opacity fill on the submit button while sending.
-- **Ghost / Secondary:** none in the system — the only button is the solid primary CTA (Contact, retry, home). Keep it that way.
+- **Hero primary:** Sunburst fill, Midnight text, full pill, `px-7 py-3`, hover Sunburst Hover.
+- **CTA / submit:** Midnight fill, Ivory text, full pill; hover Midnight Soft.
+- **Hero secondary:** 1px Line Dark outline, Ivory text; hover Sunburst border + text.
+- All: `min-h-11`, 44px touch, `focus-visible` 2px ring (Sunburst on dark, Midnight on light) + matching ring-offset on the section color.
 
-### Cards / Containers
-- **Corner Style:** 8px radius.
-- **Background:** white.
-- **Shadow Strategy:** panel-rest (shadow-lg) at rest → panel-lift (shadow-xl) + `scale(1.05)` on hover, both over 300ms.
-- **Border:** none; the grey field provides separation.
-- **Internal Padding:** 32px for service/section panels; 24px for the form card and modal.
-- **Icon slot:** service cards center a large tool icon (`text-5xl`, color = the service's Tool Spectrum color) above the title.
+### Panels / Cards
+- `rounded-3xl`, Ivory fill, 1px Line border, padding 32–40px. Service/scenario/method/relationship/contact panels all follow the same fill without becoming an identical grid (asymmetric columns, alternating rows, one dark panel).
 
 ### Inputs / Fields
-- **Style:** white fill, 1px Mid Slate (#374151) stroke, 6px radius, padding 8px, text-sm.
-- **Focus:** 2px Deep Slate ring (focus:ring-2) swapping the border color; no glow, no color.
-- **Labels:** 12px-above text-sm font-medium in ink.
-- **Error / Disabled:** inline error text in `text-error` under the field; submit disabled at 60% opacity.
+- Shell fill, 1px Line border, `rounded-lg`, `p-3`, Ink text; focus swaps border to Midnight + a 2px Midnight ring. Labels `text-sm font-medium text-ink`, required `*` in Error. Errors: `text-error text-sm` with `role="alert"`, `aria-invalid`/`aria-describedby`.
 
 ### Navigation
-- **Style:** the dark Charcoal Slate header bar (`#2f3337`), white text, brand name at text-xl/2xl semibold on the left, centered links on desktop.
-- **Default / Hover:** links are plain white text; hover floods a Mid Slate (#374151) 5px pill behind the link. **Deliberate deviation from the original Cloud Guard (#babbbc) pill:** Cloud Guard fails WCAG text contrast against the white link labels (~1.6:1 on hover/focus); the white-text pill idiom is preserved using Mid Slate, which passes AA. Cloud Guard remains defined in the sidecar but is retired from interactive use.
-- **States:** current locale is a transparent select (Locale Ink text) in the bar; on mobile the links hide behind a hamburger that opens a white (`shadow-md`) centered dropdown with black links.
-- **Territory:** white text on Charcoal Slate only. Never a light header.
-
-### Locale Switcher
-- **Style:** transparent select with Locale Ink (#9ca3af) text on the dark header; a `sr-only` label; no visible chrome, no caret by default.
+- Midnight header (continues into the hero seamlessly). Left: `BrandMark` + wordmark. Center (lg): anchor links (`#services`, `#method`, `#company`) in Ivory Muted → Ivory on hover, with a soft ivory 8% hover wash; then the Sunburst CTA to `#contact`. Right: locale switcher (transparent, `text-ivory-muted`, Sunburst focus ring) + hamburger on mobile opening a Midnight Raised dropdown (`w-[min(20rem,calc(100%-1.5rem))]`). Skip link to `#main`; `FocusOnRouteChange` moves focus after locale navigation.
 
 ### Success Dialog
-- **Style:** full-screen Black 60% overlay, a Mid Slate (#374151) panel at 24px padding, 8px radius, `max-w-sm` (~384px).
-- **Content:** white semibold title (text-xl), light ash body text (text-gray-300); focus is trapped inside the dialog (Escape or the close button) and close navigates home. **Deliberate deviation from the original "auto-navigates home after 3s":** the timer was dropped for WCAG 2.2.1 (no adjustable time limit); navigation happens only on explicit user action.
+- Overlay scrim, Midnight Raised panel `rounded-2xl` with a full-pill Sunburst focus ring on the close button; focus trapped, Escape closes, close returns to the page (no navigation).
 
 ## App Icon
 
-The brand mark is the **Sunrise S**: a warm, flowing "S" traced by two thick rounded strokes on a midnight-blue rounded square (`rx≈0.22`). The upper curve is sunrise amber and the lower curve ivory, so the mark reads as a sunrise over a continuous, flowing process — Sunday + software process. A small amber sun dot sits at the top-right. Pure vector strokes, no font dependency, so it rasterizes identically everywhere.
-
-- **Colors (brand mark only, not in the component palette):** midnight `#101C2C`, sunrise amber `#FFB547`, ivory `#F5F0E6`.
-- `src/app/icon.svg` is the favicon (served by Next at `/icon.svg`).
-- `src/app/apple-icon.png` (180×180, generated from the SVG with `sharp`) is the iOS home-screen/touch icon.
+The **Sunrise S** mark: a thick, flowing "S" traced by two rounded strokes on a midnight rounded square (`rx≈0.22`). Upper curve Sunburst, lower curve Ivory, small Sunburst sun dot top-right — sunrise over a continuous, flowing process. Source `src/app/icon.svg` (favicon) + `src/app/apple-icon.png` (iOS). Rendered inline in the UI only through `src/components/brandMark.tsx` (same vectors, `aria-hidden`, always the same proportions).
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** use Charcoal Slate for full-width structure (header/footer) and Deep Slate for the CTA fill and heading ink. The two darks are the only fills allowed.
-- **Do** keep every page on the fog-to-ash grey gradient (`from-gray-100 to-gray-300`) with white panels above it.
-- **Do** always render service icons in that service's single Tool Spectrum color — the same color on Home and Services.
-- **Do** communicate interactivity by lifting: card and button hover = scale(1.05) + one shadow step (panel-rest → panel-lift), 300ms.
-- **Do** use quite rounded corners (8px cards/buttons, 6px inputs, circular avatars) and never fewer than two hierarchy levels of dark ink on white panels.
-- **Do** keep the entrance motion to the two approved moves: the page fade-in (0.5s) and the template fade-and-rise (opacity + 10px, 0.4s, easeInOut).
+- **Do** use Midnight for full-width structure (header, hero, Company, footer) and Midnight fields for CTAs on light.
+- **Do** use amber only as the brand voice and the honesty label: kickers, sequence numbers, small rules, honest chips, the S's upper curve.
+- **Do** keep every light surface warm — Ivory panels, Shell/Ash Warm field; never white.
+- **Do** render the Sunrise S exclusively through `brandMark.tsx` (or the favicon files) — never redraw it.
+- **Do** keep composition asymmetric: 7/5 and offset panels, alternating scenario rows, one emphasized dark panel.
+- **Do** run real copy at every breakpoint; check hairline borders and pill wraps; keep 44px touch targets and `focus-visible` rings everywhere.
+- **Do** keep motion to the two approved moves: the CSS `.page-enter` template fade and quiet color/background hovers under `--ease-smooth`.
 
 ### Don't:
-- **Don't** use saturated colors for backgrounds, headings, borders, or fills — the Tool Spectrum is icons only.
-- **Don't** restyle a card on hover with a hue change; only lift (scale + shadow).
-- **Don't** introduce a second button variant or a light header; the single solid CTA on Charcoal Slate structure is the system.
-- **Don't** put color-coded emphasis on body copy — ink weight (gray-800 bold) and size carry hierarchy.
-- **Don't** increase card radius beyond 8px or start pill-ing cards; keep the "white panel on grey field" idiom intact.
-- **Don't** reintroduce hard borders on white cards; the grey field and shadows separate surfaces.
+- **Don't** put small Sunburst text on light surfaces (use Amber Deep) or Amber Deep text on dark (use Sunburst).
+- **Don't** use amber for large fills, gradients, or running body copy.
+- **Don't** fall back to uniform grids of icon + title + text cards.
+- **Don't** add a second dark family or a grey/charcoal header — one Midnight world.
+- **Don't** give panels both a border and a shadow (declare elevation once).
+- **Don't** introduce a card-grid scaffold, hero-metric numbers, or section numbers beyond the meaningful 01/02/03/04 sequences.
+- **Don't** draw decorative panels with invented figures; label illustrative diagrams honestly.

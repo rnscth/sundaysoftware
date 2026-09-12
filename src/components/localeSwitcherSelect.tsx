@@ -37,13 +37,13 @@ export default function LocaleSwitcherSelect({children, label}: Props) {
   return (
     <label
       className={clsx(
-        'relative text-locale-ink flex items-center min-h-11',
+        'relative text-ivory-muted flex items-center min-h-11',
         isPending && 'transition-opacity [&:disabled]:opacity-30'
       )}
     >
       <span className="sr-only">{label}</span>
       <select
-        className="appearance-none cursor-pointer bg-transparent py-2.5 pl-2 pr-6 rounded focus-visible:ring-2 focus-visible:ring-card-surface focus-visible:outline-none"
+        className="appearance-none cursor-pointer bg-transparent py-2.5 pl-2 pr-6 rounded text-sm font-medium focus-visible:ring-2 focus-visible:ring-sunburst focus-visible:outline-none"
         value={locale}
         disabled={isPending}
         onChange={onSelectChange}
