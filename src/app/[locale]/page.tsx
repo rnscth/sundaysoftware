@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import ContactForm from '@/components/contactForm';
+import { CONTACT_PHONE, CONTACT_WHATSAPP_URL } from '@/lib/contact';
 import { AiOutlineMail } from 'react-icons/ai';
 import { FaWhatsapp } from 'react-icons/fa';
 
@@ -520,18 +521,18 @@ export default async function HomePage() {
             </p>
             <div className="mt-4 space-y-2">
               <a
-                href="mailto:Sunday.Software.Solutions@gmail.com"
+                href={`mailto:${tContact('emailAddress')}`}
                 className="flex items-center gap-3 py-3 rounded text-midnight hover:text-ink-muted transition-colors duration-200 ease-smooth focus-visible:ring-2 focus-visible:ring-amber-deep focus-visible:ring-offset-2 focus-visible:outline-none break-all"
               >
                 <AiOutlineMail size={22} className="text-amber-deep shrink-0" aria-hidden="true" />
-                {tContact('email')}
+                {tContact('emailAddress')}
               </a>
               <a
-                href="https://wa.me/+526865254888"
+                href={CONTACT_WHATSAPP_URL}
                 className="flex items-center gap-3 py-3 rounded text-midnight hover:text-ink-muted transition-colors duration-200 ease-smooth focus-visible:ring-2 focus-visible:ring-amber-deep focus-visible:ring-offset-2 focus-visible:outline-none"
               >
                 <FaWhatsapp size={22} className="text-amber-deep shrink-0" aria-hidden="true" />
-                {tContact('whatsapp')}
+                {CONTACT_PHONE}
               </a>
             </div>
 

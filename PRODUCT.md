@@ -25,7 +25,7 @@ Sunday Software Solutions is a software and AI practice that connects the system
 
 - Single-page bilingual landing at `/en` and `/es`, bilingual cookie-backed switcher. One route, anchor navigation to `#services`, `#method`, `#company`, `#contact`.
 - Sections: hero, familiar problems, three service lines (asymmetric, not a card grid), illustrative use-case scenarios, method (4 steps), relationship model (initial implementation / recurring service / improvements), a short honest "Sunday" section, contact.
-- Contact form is minimal (name, email, interest, message) and posts to `/api/send_email`, which validates payload (rate limit, honeypot, escaped HTML) and forwards to the Gmail SMTP account. Direct channels: Sunday.Software.Solutions@gmail.com and WhatsApp +52 686 525 4888.
+- Contact form is minimal (name, email, interest, message) and posts to `/api/send_email`, which validates payload (rate limit, honeypot, escaped HTML) and forwards to the Gmail SMTP account. Direct channels: sunday@sunday-software.com and WhatsApp via `CONTACT_PHONE` env var (fallback `+01 555 666 7777`, see `src/lib/contact.ts`).
 - Visual world: midnight `#101C2C`, sunrise amber `#FFB547`, ivory `#F5F0E6`; the Sunrise S mark (user-designed, `src/app/icon.svg`) is the brand identity in header, footer and favicon — never redrawn.
 
 ## Capabilities and Constraints
@@ -43,7 +43,7 @@ Undecided product facts (do not invent): real client cases or testimonials, empl
 
 - Name: Sunday Software Solutions.
 - Voice: professional, warm, precise; no theater, no invented grandeur.
-- Public contact identity: Sunday.Software.Solutions@gmail.com, WhatsApp +52 686 525 4888.
+- Public contact identity: sunday@sunday-software.com; WhatsApp number from `CONTACT_PHONE` env var (fallback `+01 555 666 7777`).
 - The Sunrise S mark represents a sunrise over a flowing process; it is used as the app icon, header/footer brand mark, and never redrawn arbitrarily.
 
 ## Evidence on Hand

@@ -25,9 +25,9 @@ Nota: `npm run lint` usa `next lint`, deprecado en Next 15 y no hay configuraci�
 - No construir rutas a mano con `/${locale}/...`. Leer el locale desde `useLocale()` o de las utilidades de next-intl.
 
 ### 3. Rutas y estructura
-- Las páginas viven en `src/app/[locale]/` (nombres con mayúscula inicial: `Services`, `About`, `Contact`).
+- La landing vive en `src/app/[locale]/page.tsx` (única página bilingüe; sus componentes están en `src/components/`).
 - Las API van en `src/app/api/<nombre>/route.ts` (Route Handlers de App Router). El formulario usa `src/app/api/send_email/route.ts`. **No** usar `pages/api/*`.
-- La página de contacto (`Contact`) es un Client Component (`"use client"`); el resto son Server Components.
+- El formulario de contacto (`contactForm.tsx`) es un Client Component; la landing y el resto son Server Components.
 - Existen `not-found.tsx`, `error.tsx`, `loading.tsx` y `sitemap.ts`/`robots.ts` localizados. `sitemap`/`robots` leen `NEXT_PUBLIC_SITE_URL`.
 
 ### 4. Estilos (Tailwind v4)
@@ -37,12 +37,13 @@ Nota: `npm run lint` usa `next lint`, deprecado en Next 15 y no hay configuraci�
 
 ### 5. Tipos y calidad
 - Mantener `strict` TypeScript. Correr `npx tsc --noEmit` al terminar.
-- Los formularios usan `interface` tipada (ver `Contact/page.tsx`).
+- Los formularios usan `interface` tipada (ver `contactForm.tsx`).
 - No dejar `console.log` de depuración en producción.
 
 ### 6. API de correo y variables de entorno
 - El envío de correo usa Nodemailer + Gmail. Usar `process.env.SMTP_USER` y `process.env.SMTP_PASS`; nunca exponerlos en código ni commits.
 - El campo `from` del correo debe ser el `SMTP_USER` autenticado (Gmail no permite `from` arbitrario).
+- El teléfono de contacto (`footer` y sección `Contact`) sale de `process.env.CONTACT_PHONE` con fallback `+01 555 666 7777` (ver `src/lib/contact.ts`). No hardcodear números en mensajes o componentes.
 - Las variables van en `.env.local` (ignorado por git). Referencia en `.env.example`.
 
 ### 7. Trabajo con el repositorio

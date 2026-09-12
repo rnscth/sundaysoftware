@@ -206,11 +206,11 @@
     "thankYouMessage": "Recibimos tu mensaje y te responderemos pronto. Ya puedes cerrar esta ventana.",
     "privacyNote": "Usamos tu información solo para responder a tu solicitud. Por favor no envíes documentos financieros ni información sensible por este formulario.",
     "orDirect": "¿Prefieres escribirnos directo?",
-    "email": "Sunday.Software.Solutions@gmail.com",
-    "whatsapp": "+52 686 525 4888"
+    "emailAddress": "sunday@sunday-software.com"
   },
   "Footer": {
     "tagline": "Software e IA que conecta tus datos, procesos y aplicaciones.",
+    "email": "sunday@sunday-software.com",
     "rightsReserved": "Todos los derechos reservados."
   },
   "LocaleSwitcher": {

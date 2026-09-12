@@ -44,6 +44,7 @@ npm run dev        # servidor de desarrollo en http://localhost:3000
 | `SMTP_USER` | Correo Gmail autenticado (remitente y destinatario del formulario) |
 | `SMTP_PASS` | Contraseña de aplicación de Gmail (app password) |
 | `NEXT_PUBLIC_SITE_URL` | URL canónica del sitio (para sitemap y robots) |
+| `CONTACT_PHONE` | Teléfono/WhatsApp de contacto (fallback: `+01 555 666 7777`) |
 
 Ver `.env.example`. El archivo `.env.local` no debe subirse al repositorio.
 

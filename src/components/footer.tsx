@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { CONTACT_PHONE, CONTACT_WHATSAPP_URL } from '@/lib/contact';
 import BrandMark from './brandMark';
 
 export default function Footer() {
@@ -23,19 +24,19 @@ export default function Footer() {
 
           <div className="flex flex-col sm:flex-row items-center gap-3 text-sm">
             <a
-              href="mailto:Sunday.Software.Solutions@gmail.com"
+              href={`mailto:${t('email')}`}
               className="text-ivory-muted hover:text-sunburst transition-colors duration-200 ease-smooth rounded focus-visible:ring-2 focus-visible:ring-sunburst focus-visible:outline-none break-all"
             >
-              Sunday.Software.Solutions@gmail.com
+              {t('email')}
             </a>
             <span className="hidden sm:inline text-line-dark" aria-hidden="true">
               ·
             </span>
             <a
-              href="https://wa.me/+526865254888"
+              href={CONTACT_WHATSAPP_URL}
               className="text-ivory-muted hover:text-sunburst transition-colors duration-200 ease-smooth rounded focus-visible:ring-2 focus-visible:ring-sunburst focus-visible:outline-none"
             >
-              +52 686 525 4888
+              {CONTACT_PHONE}
             </a>
           </div>
 
