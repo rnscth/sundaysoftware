@@ -6,15 +6,17 @@ const locales = ['en', 'es'] as const;
 export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date();
 
-  return locales.map((locale) => ({
-    url: `${baseUrl}/${locale}`,
-    lastModified: currentDate,
-    priority: 1,
-    alternates: {
-      languages: {
-        en: `${baseUrl}/en`,
-        es: `${baseUrl}/es`,
+  return ['', '/privacy'].flatMap((path) =>
+    locales.map((locale) => ({
+      url: `${baseUrl}/${locale}${path}`,
+      lastModified: currentDate,
+      priority: path ? 0.5 : 1,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/en${path}`,
+          es: `${baseUrl}/es${path}`,
+        },
       },
-    },
-  }));
+    }))
+  );
 }

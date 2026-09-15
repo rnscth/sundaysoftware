@@ -22,7 +22,7 @@ export default function Footer() {
 
           <p className="max-w-md text-sm text-ivory-muted">{t('tagline')}</p>
 
-          <div className="flex flex-col sm:flex-row items-center gap-3 text-sm">
+           <div className="flex flex-col sm:flex-row items-center gap-3 text-sm">
             <a
               href={`mailto:${t('email')}`}
               className="text-ivory-muted hover:text-sunburst transition-colors duration-200 ease-smooth rounded focus-visible:ring-2 focus-visible:ring-sunburst focus-visible:outline-none break-all"
@@ -39,6 +39,13 @@ export default function Footer() {
               {CONTACT_PHONE}
             </a>
           </div>
+
+          <Link
+            href="/privacy"
+            className="rounded text-sm text-ivory-muted transition-colors duration-200 ease-smooth hover:text-sunburst focus-visible:ring-2 focus-visible:ring-sunburst focus-visible:outline-none"
+          >
+            {t('privacyPolicy')}
+          </Link>
 
           <p className="text-xs text-ivory-muted">
             &copy; {new Date().getFullYear()} Sunday Software Solutions. {t('rightsReserved')}

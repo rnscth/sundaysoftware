@@ -211,7 +211,70 @@
   "Footer": {
     "tagline": "Software and AI that connects your data, processes and applications.",
     "email": "sunday@sunday-software.com",
-    "rightsReserved": "All Rights Reserved"
+    "rightsReserved": "All Rights Reserved",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "Privacy": {
+    "metaTitle": "Privacy Policy | Sunday Software Solutions",
+    "metaDescription": "How Sunday Software Solutions collects, uses, and shares information.",
+    "kicker": "Sunday Software Solutions",
+    "title": "Privacy Policy",
+    "intro": "This Privacy Policy explains how Sunday Software Solutions handles information when you visit our website, contact us, or use our business automation services.",
+    "effectiveDate": "Effective date: September 15, 2026",
+    "information": {
+      "title": "Information We May Collect",
+      "intro": "We may collect information you provide or that is needed to operate our website and services, including:",
+      "items": {
+        "name": "Your name, business name, role, email address, and phone or WhatsApp number.",
+        "messages": "Messages, project requirements, and other information you voluntarily share through contact forms or WhatsApp.",
+        "technical": "Basic technical information necessary to operate the website and services."
+      }
+    },
+    "use": {
+      "title": "How We Use Information",
+      "items": {
+        "inquiries": "To respond to inquiries.",
+        "proposals": "To prepare service proposals.",
+        "meetings": "To schedule meetings.",
+        "services": "To deliver and improve our business automation services."
+      }
+    },
+    "providers": {
+      "title": "Service Providers and Sharing",
+      "intro": "We may use service providers that help us operate our business, including providers of:",
+      "items": {
+        "infrastructure": "Website hosting and backend infrastructure.",
+        "email": "Email services.",
+        "whatsapp": "The WhatsApp Business Platform when you contact us through WhatsApp.",
+        "ai": "AI processing used to organize and respond to business inquiries."
+      },
+      "sharing": "We share information only with service providers needed to operate the service or when legally required.",
+      "noSale": "Sunday Software Solutions does not sell personal information."
+    },
+    "sensitive": {
+      "title": "Please Do Not Send Sensitive Information",
+      "body": "Do not send passwords, API keys, banking data, or sensitive confidential information through WhatsApp or our contact forms."
+    },
+    "retention": {
+      "title": "Data Retention",
+      "body": "We retain information only as long as reasonably necessary for the inquiry, service relationship, legal obligations, and security."
+    },
+    "rights": {
+      "title": "Your Choices and Questions",
+      "intro": "You may contact us to:",
+      "items": {
+        "access": "Request access to your personal information.",
+        "correction": "Request correction of inaccurate information.",
+        "deletion": "Request deletion of your personal information.",
+        "questions": "Ask privacy-related questions."
+      },
+      "contact": "Email us at"
+    },
+    "updates": {
+      "title": "Updates to This Policy",
+      "body": "We may update this Privacy Policy from time to time. When we do, we will revise the effective date above."
+    },
+    "company": "Sunday Software Solutions is located in Mexicali, Baja California, Mexico."
   },
   "LocaleSwitcher": {
     "label": "Change language",
